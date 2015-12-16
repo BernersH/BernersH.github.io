@@ -1,15 +1,14 @@
 ---
-layout:      post
-title:       "Glad to see you here"
-subtitle:    " \"I have wait for you here for a long time\""
-date:        2015-12-16 15:00:00
-author:      "Bern3rsH"
-header-img:  "img/welcome-bg.jpeg"
+layout:     post
+title:      "Glad to see you here"
+subtitle:   " \"I have been waiting for you here for a long time\""
+date:       2015-12-16 15:00:00
+author:     "Bern3rsH"
+header-img: "img/welcome-bg.jpeg"
 tags:
     - Life 
     - FE2
 ---
-
 
 
 
