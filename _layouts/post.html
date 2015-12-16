@@ -54,15 +54,6 @@ layout: default
 
 
 
-                <div class="bdsharebuttonbox">
-                    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-                    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-                    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-                    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-                    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-                    <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
-
-                </div>
 
 
 
@@ -70,7 +61,7 @@ layout: default
 
                 {% if site.duoshuo_share && site.duoshuo_username %}
                 <!-- 多说 Share start -->
-                </style>
+                 </style>
                 <div class="ds-share"
                     style="text-align: right"
                     data-thread-key="{{page.id}}"
@@ -93,6 +84,17 @@ layout: default
                 <!-- 多说 Share end-->
                 {% endif %}
 
+                <div class="bdsharebuttonbox">
+                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+                <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+                <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+                </div>
+
+
+
 
                 <ul class="pager">
                     {% if page.previous.url %}
@@ -106,6 +108,8 @@ layout: default
                     </li>
                     {% endif %}
                 </ul>
+
+
 
 
                 {% if site.duoshuo_username %}
