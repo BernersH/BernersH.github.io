@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 16 Dec 2015 23:31:16 +0800</pubDate>
-    <lastBuildDate>Wed, 16 Dec 2015 23:31:16 +0800</lastBuildDate>
+    <pubDate>Thu, 17 Dec 2015 00:32:35 +0800</pubDate>
+    <lastBuildDate>Thu, 17 Dec 2015 00:32:35 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -19,7 +19,7 @@
 
 &lt;p&gt;终于有个自己的地方，网上的家？&lt;/p&gt;
 
-&lt;p&gt;［直接看实现，gogogo] (#build)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#build&quot;&gt;直接看实现，gogogo&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;一直憧憬着，能够有这么个地方，能够记录有时脑子坏了的自己那些云波诡谲的想法，还有作为一个把全栈工程师当作未来目标的自己对于技术的一点看法和感悟，听和看无数的大牛说过要搞自己的技术博客。而临到想写时，那些CSDN，博客园之类的，可能时和设计师交朋友交得多了，审美也挑剔了起来，觉得那些博客网站太丑了。恰好做的前端，于是一直想自己折腾一个“部落格”，但是一直都太懒了，还有觉得自己水平并不能做出自己满意的作品。&lt;/p&gt;
 
