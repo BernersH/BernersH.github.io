@@ -5,14 +5,14 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 17 Dec 2015 00:32:35 +0800</pubDate>
-    <lastBuildDate>Thu, 17 Dec 2015 00:32:35 +0800</lastBuildDate>
+    <pubDate>Thu, 17 Dec 2015 01:59:52 +0800</pubDate>
+    <lastBuildDate>Thu, 17 Dec 2015 01:59:52 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Glad to see you here</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;“前进！不择手段的前进！！”&lt;/p&gt;
+  &lt;p&gt;“前进！不择手段地前进！！”&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;前言&lt;/h2&gt;
@@ -26,8 +26,10 @@
 &lt;p&gt;直到想要去公司寒假实习的时候，猛然发现自己没有什么拿得出手的东西，仅仅只有github上那几个差劲的项目。慌张起来，于是花了几天，也算是了却一桩心愿，以后也有了自己的“自留地”。&lt;/p&gt;
 
 &lt;p id=&quot;build&quot;&gt;&lt;/p&gt;
+
 &lt;hr /&gt;
-&lt;p&gt;## 技术实现&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;技术实现&lt;/h2&gt;
 
 &lt;p&gt;暑假的时候也动过写博客的念头，因后来忙于外包，也就没时间做，放弃了。不过也google了许多相关的资料，以前就很喜欢看阮老师的博客，恰巧里面有一篇&lt;a href=&quot;http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html&quot;&gt;《搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门》&lt;/a&gt;觉得很对胃口，于是就决定使用&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;+&lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt;来搭建我的“小窝”。这是Jekyll的&lt;a href=&quot;http://jekyllcn.com/&quot;&gt;中文文档网站&lt;/a&gt;,里面详细介绍了关于jekyll的一些指令和配置。&lt;/p&gt;
 
@@ -35,43 +37,63 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt; 对于我来说，这是一个很好的契机去学习这门让我的写作变得优雅起来的语言，名号早已如雷贯耳，却一直没用过。&lt;br /&gt;
-&lt;a href=&quot;http://wowubuntu.com/markdown/&quot;&gt;Markdown语法说明&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt; 对于我来说，这是一个很好的契机去学习这门让我的写作变得优雅起来的语言，名号早已如雷贯耳，却一直没用过。&lt;a href=&quot;http://wowubuntu.com/markdown/&quot;&gt;Markdown语法说明&lt;/a&gt;而Github Pages推荐使用的Markdown解释器是kramdown，与一般的Markdown语法又有所不同，但也不需要过分纠结。这是&lt;a href=&quot;https://github.com/flyaway1217/flyaway1217.github.com/blob/master/_drafts/Kramdown-Syntax.md&quot;&gt;kramdown的中文文档&lt;/a&gt;(这是我从别人Github Pages博客的draft(草稿)里找到的，我也是蛮拼的)。&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;无需&lt;strong&gt;数据库&lt;/strong&gt;、&lt;strong&gt;评论功能&lt;/strong&gt;，不需要不断的更新版本——只用关心你的博客内容。&lt;/li&gt;
-  &lt;li&gt;只需使用Github的发布功能，就&lt;strong&gt;Blog Post&lt;/strong&gt;,加深了Github的使用（虽然我基本都是用的Mac的Github桌面版。。。）&lt;/li&gt;
-  &lt;li&gt;有很多很多的模版供你选择，还可以自己随意更改&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;无需&lt;strong&gt;数据库&lt;/strong&gt;、&lt;strong&gt;评论功能&lt;/strong&gt;，不需要不断的更新版本——只用关心你的博客内容。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;只需使用Github的发布功能，就&lt;strong&gt;Blog Post&lt;/strong&gt;,加深了Github的使用（虽然我基本都是用的Mac的Github桌面版。。。）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;有很多很多的模版供你选择，还可以自己随意更改&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;额，最大的问题。还是&lt;strong&gt;GFW&lt;/strong&gt;(俗称的墙）的问题（手动再见）&lt;/p&gt;
+&lt;p&gt;额，Jekyll＋Github Pages最大的问题。还是&lt;strong&gt;GFW&lt;/strong&gt;(俗称的墙）的问题（手动再见）&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;github服务器访问过慢,不过还好可以忍受&lt;/li&gt;
-  &lt;li&gt;Jekyll的默认插件Disqus使用的都是国内无法使用的Facebook,Twitter等的帐号，而国内的评论插件多说，有言等的评论框真的太丑了。。。稍微逼格高点的模版就会有深深的违和感，所以暂时还没有做评论，以后考虑考虑再说&lt;/li&gt;
-  &lt;li&gt;Jekyll的安装在国内真心太慢了，我目前翻墙只是用&lt;a href=&quot;https://github.com/XX-net/XX-Net&quot;&gt;XX-Net&lt;/a&gt;配合Chrome里的&lt;a href=&quot;https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?utm_source=chrome-ntp-icon&quot;&gt;Proxy SwitchyOmega&lt;/a&gt;插件，没有全局的VPN，所以按照Jekyll文档安装的时候速度奇慢，貌似是被墙了&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;github服务器访问过慢,不过还好可以忍受&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Jekyll的默认插件Disqus使用的都是国内无法使用的Facebook,Twitter等的帐号，而国内的评论插件多说，有言等的评论框真的太丑了。。。稍微逼格高点的模版就会有深深的违和感，所以暂时还没有做评论，以后考虑考虑再说,我试用了&lt;a href=&quot;http://share.baidu.com/&quot;&gt;百度分享&lt;/a&gt;来做分享功能，十分方便，只要在post布局页面插入HTML和JS语句即可，会自动变成图标进行分享，唯一的不足可能是灰色主题的微信图标有bug（见&lt;a href=&quot;#bug&quot;&gt;文底&lt;/a&gt;)和印象笔记图标不显示（手动再见）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Jekyll的安装在国内真心太慢了，我目前翻墙只是用&lt;a href=&quot;https://github.com/XX-net/XX-Net&quot;&gt;XX-Net&lt;/a&gt;配合Chrome里的&lt;a href=&quot;https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?utm_source=chrome-ntp-icon&quot;&gt;Proxy SwitchyOmega&lt;/a&gt;插件，没有全局的VPN，所以按照Jekyll文档安装的时候速度奇慢，貌似是被墙了&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;
-
-&lt;p&gt;下面就是我遇到几个问题&lt;/p&gt;
+&lt;p&gt;下面就是我遇到几个&lt;strong&gt;问题&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;安装Jekyll。&lt;a href=&quot;http://jekyll.bootcss.com/docs/installation/&quot;&gt;Jekyll的安装文档&lt;/a&gt;里面说的是用&lt;code&gt;gem install jekyll&lt;/code&gt;来安装，然后Mac自带了Ruby和gem。但是，现实是残酷的，怎么也不成功。后来在&lt;a href=&quot;http://www.cnblogs.com/kaiye/archive/2013/04/24/3039345.html&quot;&gt;Mac下搭建jekyll环境&lt;/a&gt;里才发现自带的版本是过低的，无法安装Jekyll，而且后来需要替换成淘宝的镜像才能正常速度安装Jekyll。具体操作他的博文里都有&lt;/li&gt;
-  &lt;li&gt;用的别人的模版配置问题。我的博客大的主题是fork的&lt;a href=&quot;https://github.com/Huxpro/huxblog-boilerplate&quot;&gt;Hux同学（学习的榜样）Blog的Boilerplate&lt;/a&gt;，但是在配置的时候要注意_config.yml里的url和baseurl。&lt;strong&gt;你是用户和组织的站点（username.github.io)下master的分支还是username.github.io下的新建项目的分支&lt;/strong&gt;。 如果是前者，那么直接将Jekyll的文件夹commit到master分支上;如果是后者，先在username.github.io下添加gh-pages分支，然后在_config.yml里在baseurl添加/project-name（注意必须存在头部的斜杠以及不能有尾部的斜杠。）还有就是Jekyll的本地文件夹里的CNAME记得修改为自己博客的网址，不然Github在build你的页面的时候会失败，发邮件给你（亲测，哈哈)。&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;安装Jekyll。&lt;a href=&quot;http://jekyll.bootcss.com/docs/installation/&quot;&gt;Jekyll的安装文档&lt;/a&gt;里面说的是用&lt;code&gt;gem install jekyll&lt;/code&gt;来安装，然后Mac自带了Ruby和gem。但是，现实是残酷的，怎么也不成功。后来在&lt;a href=&quot;http://www.cnblogs.com/kaiye/archive/2013/04/24/3039345.html&quot;&gt;Mac下搭建jekyll环境&lt;/a&gt;里才发现自带的版本是过低的，无法安装Jekyll，而且后来需要替换成淘宝的镜像才能正常速度安装Jekyll。具体操作他的博文里都有&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;用的别人的模版配置问题。我的博客大的主题是fork的&lt;a href=&quot;https://github.com/Huxpro/huxblog-boilerplate&quot;&gt;Hux同学（学习的榜样）Blog的Boilerplate&lt;/a&gt;，但是在配置的时候要注意_config.yml里的url和baseurl。&lt;strong&gt;你是用户和组织的站点（username.github.io)下master的分支还是username.github.io下的新建项目的分支&lt;/strong&gt;。 如果是前者，那么直接将Jekyll的文件夹commit到master分支上;如果是后者，先在username.github.io下添加gh-pages分支，然后在_config.yml里在baseurl添加/project-name（注意必须存在头部的斜杠以及不能有尾部的斜杠。）还有就是Jekyll的本地文件夹里的CNAME记得修改为自己博客的网址，不然Github在build你的页面的时候会失败，发邮件给你（亲测，哈哈)。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;文件编码问题。貌似因为Jekyll的编码问题，所以博文的标题是不能用中文的，而且整个博文的编码也必须是UTF-8，windows平台记得不能带BOM字符。我就因为不小心用sublime打开了博文，改变了编码导致全部乱码，而且Github Pages也是无法识别非UTF-8编码的文章，因为这个又收到亲爱的Github的邮。（它一定是爱上我了，嗯，准是这样）&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;当你把Jekyll安装完，本地修改调试完，就可以将文件夹commit到你的username.github.io仓库的master下啦。大概过10分钟，你就可以在&lt;strong&gt;username.github.io&lt;/strong&gt;（默认）这个网址下欣赏自己的博客页面了。&lt;/p&gt;
+&lt;p&gt;当你把Jekyll安装完，本地修改调试完，就可以将文件夹commit到你的username.github.io仓库的master下啦。大概过10分钟，你就可以在&lt;strong&gt;username.github.io&lt;/strong&gt;（默认）这个网址下中二地看着自己的博客(孩)页面(子)了。&lt;/p&gt;
 
 &lt;p&gt;Good luck!&lt;/p&gt;
 
-&lt;p&gt;##后记&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;后记&lt;/h2&gt;
 
 &lt;p&gt;这是我第一次写markdown的文档（囧），一边看一边要查询语法，也是第一次写这种教授类的文章，觉得更加佩服那些写了很多博文的技术大牛。写的时候你需要不断回忆当时所遇到的问题，还要去找一下当时解决所用的网址和方法。但是在搭建这个博客的过程中，也学习了很多，更熟练的用Boostrap，用Jekyll的layout可以快速定制每个页面的排版等。&lt;/p&gt;
 
 &lt;p&gt;正是这样，一篇小小的开博文，几乎耗去了我一个下午的时间。。。于是以后一定要养成遇到问题随手把问题和解决方法记录在Evernote上，然后觉得有价值的来这里与大家分享。希望自己能够坚持把，虽然现在关于前端的博客一大把。。。但是，我会竭尽我自己一点小小的能力写出一点东西(比如这个博客本身的代码实现我有些地方还不太明白，研究之后再写一点东西）。这如最前面所说的&lt;a href=&quot;http://book.douban.com/subject/2567698/&quot;&gt;《三体》&lt;/a&gt;里的名言”前进!不择手段的前进!!”，也不枉现在度过的这些美好的青春时光。&lt;/p&gt;
 
-&lt;p&gt;以上。&lt;br /&gt;
-                                                 Bern3rsH写于2015.12.16&lt;/p&gt;
+&lt;p&gt;以上。&lt;/p&gt;
+
+&lt;p id=&quot;bug&quot;&gt;&lt;/p&gt;
+&lt;p&gt;－－Bern3rsH写于2015.12.16&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 16 Dec 2015 23:00:00 +0800</pubDate>
