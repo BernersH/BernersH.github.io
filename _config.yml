@@ -5,7 +5,7 @@ header-img: img/home-bg.jpeg
 email: bern3rsh@gmail.com
 description: ""
 keyword: ""
-url: ""              # your host, for absolute URL
+url: "bernersh.github.io"              # your host, for absolute URL
 baseurl: ""                      # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -35,7 +35,7 @@ anchorjs: true                          # if you want to customize anchor. check
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+ input: GFM                            # use Github Flavored Markdown !important
 
 
 
@@ -55,7 +55,7 @@ kramdown:
 #ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
 #ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-#ga_domain: huangxuan.me
+#ga_domain: bernersh.github.io
 
 
 
