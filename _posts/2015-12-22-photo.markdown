@@ -30,42 +30,42 @@ tags:
 HTML (嗯，当时要做那个页面要能让用户最多上传9个图片，我也没想到什么好的动态移动那个添加按钮的办法，就用死办法，先在页面上安置9个按钮，然后添加一个，使原来的那个按钮［加号图片］失效，然后再使下一个显示（机智如我。。。））
 
 ```
-     <div class="things" id="headimg">
+	 <div class="things" id="headimg">
 	 <div id="get1" class="addphoto1 " onclick="addphoto(1)">
 	 <img id="photo1" src="Myicon/add icon.png" />
 	 </div>
 	 <div id="get2" class="addphoto transparent" onclick="addphoto(2)">
-	<img id="photo2" src="Myicon/add icon.png" />
-	</div>
-	<div id="get3" class="addphoto transparent" onclick="addphoto(3)">
-	<img id="photo3" src="Myicon/add icon.png" />
-	</div>
-	<div id="get4" class="addphoto transparent" onclick="addphoto(4)">
-	<img id="photo4" src="Myicon/add icon.png" />
-	</div>
-	<div id="get5" class="addphoto transparent" onclick="addphoto(5)">
-	<img id="photo5" src="Myicon/add icon.png" />
-	</div>
-	<div id="get6" class="addphoto transparent" onclick="addphoto(6)">
-	<img id="photo6" src="Myicon/add icon.png" />
-	</div>
-	<div id="get7" class="addphoto transparent" onclick="addphoto(7)">
-	<img id="photo7" src="Myicon/add icon.png" />
-	</div>
-	<div id="get8" class="addphoto transparent" onclick="addphoto(8)">
-	<img id="photo8" src="Myicon/add icon.png" />
-	</div>
-	<div id="get9" class="addphoto transparent" onclick="addphoto(9)">
-	<img id="photo9" src="Myicon/add icon.png" />
-	</div>
-	</div>
+	 <img id="photo2" src="Myicon/add icon.png" />
+	 </div>
+	 <div id="get3" class="addphoto transparent" onclick="addphoto(3)">
+	 <img id="photo3" src="Myicon/add icon.png" />
+	 </div>
+	 <div id="get4" class="addphoto transparent" onclick="addphoto(4)">
+	 <img id="photo4" src="Myicon/add icon.png" />
+	 </div>
+	 <div id="get5" class="addphoto transparent" onclick="addphoto(5)">
+	 <img id="photo5" src="Myicon/add icon.png" />
+	 </div>
+	 <div id="get6" class="addphoto transparent" onclick="addphoto(6)">
+	 <img id="photo6" src="Myicon/add icon.png" />
+	 </div>
+	 <div id="get7" class="addphoto transparent" onclick="addphoto(7)">
+	 <img id="photo7" src="Myicon/add icon.png" />
+	 </div>
+	 <div id="get8" class="addphoto transparent" onclick="addphoto(8)">
+	 <img id="photo8" src="Myicon/add icon.png" />
+	 </div>
+	 <div id="get9" class="addphoto transparent" onclick="addphoto(9)">
+	 <img id="photo9" src="Myicon/add icon.png" />
+	 </div>
+	 </div>
 ``` 
 
 JS
  
- ```	        
- mui('body').on('shown', '.mui-popover', function(e) {});
- mui('body').on('hidden', '.mui-popover', function(e) {});
+```	        
+ 	mui('body').on('shown', '.mui-popover', function(e) {});
+ 	mui('body').on('hidden', '.mui-popover', function(e) {});
 	
 	            function addphoto(photoid) {
 	                if (hasClass(imgdiv[photoid - 1], 'transparent')) {} 
@@ -198,8 +198,8 @@ JS
 	                    pic.src = base64;
 	                    newupload();
 	                }
-```	                
-
+```
+	                
 ## 解决
 
 #### 一筹莫展
@@ -208,16 +208,13 @@ JS
 
 #### 初见曙光
 又开始了疯狂查找解决资料的过程，后来忙活了一天（虽然有时候有点懒，但是对于有 bug的情况我还是很上心的，记得有次一个bug卡了5天，饭也没怎么吃，觉也没咋睡，天天熬夜，仿佛执念），终于找到了腾讯TGideas的这篇文章：[《H5拍照应用开发经历的那些坑儿》][5]。里面第一个坑就是照片翻转问题:
->  问题描述：
 
+>  问题描述：
 >  手持设备不同方向所拍摄的照片方向不同，照片的方向都会不同，但相册中会自动纠正，这一问题在ios和android中都存在。 
 
 >  问题解决：
-
 >1、将图片数据转换成二进制数据，方便获取图片的exif信息；（这里我引入了 [Binary Ajax][6]）
-
 >2、获取图片的exif信息；（这里我使用了 [Javascript EXIF Reader][7]）
-
 >3、通过图片exif信息，获取图片拍摄时所持设备方向orientation。 
 
 他的代码
@@ -260,13 +257,14 @@ JS
 ```
 
 Oh,原来是这个exif在搞鬼，懂了懂了。等等，exif是个什么鬼，于是万能的Google告诉了我答案：[exif][8]（照顾国情，我把链接换成了百度百科的）。总的来说，exif就是一种图片格式，但是它比普通的图片格式多了很多参数，eg.光圈 快门 白平衡，还有就是照片的方向，所以腾讯的大大们就获取了这个参数并将他给了照片，照片就可以像从照片库里选出来的一样，可以正常翻转啦。
+
 #### 意外发现
 在读他们的代码时，我发现一个FileReader()和readAsDataURL()，原谅我浅薄，虽然眼熟，但是不知道怎么用，于是还是查查查：[FileReader.readAsDataURL()][9]（今天才发现[MDN][10]真是好东西，以后一定要多逛逛，把它用起来）页面里面有个demo
 
 HTML
 
 ```	
-   <input type="file" onchange="previewFile()"><br>
+	<input type="file" onchange="previewFile()"><br>
 	<img src="" height="200" alt="Image preview...">
 ```
 
@@ -294,7 +292,7 @@ JS
 终于把这个问题解决了，处女座表示终于舒服了。。。不然有的照片正，有的照片反，真的难受，哈哈。
 
 ## 后记
-虽然这个项目早就交付了，可能因为也没有做多少项目。对于自己的每个项目和包括自己的博客，都像自己的孩子一样，想让他们尽善尽美。毕竟，这都是自己一行行码出来的。可能代码有bug，不够优雅，页面不好看。但是，他们也是我慢慢成长的唯一的见证，那些夜晚唯一的陪伴（包括现在，夜又深了，但是就是想今天解决完问题，今天把博文写完。可能是刚开始，兴趣比较大，但是希望自己能够坚持下去，把自己认为值得和别人分享的，都努力地在自己的一亩三分田力发光发热）。今天一天虽然过的挺累的，但是有着无比的满足感，同时感觉自己真的还欠缺许多，未来还有很多自己要去看学，去看，去敲。世界上真的，总有那么多比你聪明的人还比你努力，一起がんばって （加油）吧！
+虽然这个项目早就交付了，可能因为也没有做多少项目。对于自己的每个项目和包括自己的博客，都像自己的孩子一样，想让他们尽善尽美。毕竟，这都是自己一行行码出来的。可能代码有bug，不够优雅，页面不好看。但是，他们也是我慢慢成长的唯一的见证，那些夜晚唯一的陪伴（包括现在，夜又深了，但是就是想今天解决完问题，今天把博文写完。可能是刚开始，兴趣比较大，但是希望自己能够坚持下去，把自己认为值得和别人分享的，都努力地在自己的一亩三分田力发光发热）。今天一天虽然过的挺累的，但是有着无比的满足感，同时感觉自己真的还欠缺许多，未来还有很多自己要去看学，去看，去敲。世界上真的，总有那么多比你聪明的人还比你努力，一起がんばって(加油)吧！
 
 以上。
 
