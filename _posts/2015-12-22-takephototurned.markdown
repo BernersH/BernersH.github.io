@@ -18,12 +18,19 @@ tags:
 
 ## 初遇
 今天在写简历的时候，看着自己写上的那些熟悉而又陌生的名字：兼职联盟，一块推，又想到了暑假里的那段时光。那段时光有苦有乐，但是是十分充实的，毋庸置疑，以后可能有空的时候写篇文章，纪念一下，或者做成阶段性更新的形式，也算是一种个人日记吧。等以后写了，我再把链接贴过来。
+
 偶间想起，当时好像有个问题，没有解决。那是在做[一块推][1]的时候，这也算是我第一个独立完成的前端项目。这是一个web app，页面全是html＋css＋js实现的。那时候js刚自己充分实践，用的是一个也是刚学的学长推荐的[HBuilder编译器][2]和它内置的框架[mui][3]，这是国产的编译器和框架，框架就是为了做接近原生的web app，内置很多对于移动端的优化。其实这个编译器和框架还是挺不错的，支持国产，就是小bug有点多，而且在我的电脑上卡，当时还是用了3年的老联想。。。
+
 当时我们需要做一个用户拍照或者从相册获取并预览的页面，当时也很小白（说的好像现在不是一样。。。），直接在内置的mui demo里找有这个功能的，就把他套过来，当然那个地方只有前端的，没有ajax数据传输的。后来我钻研了一下，加了和后台对接的部分，转换成64位base传给后端的，这里没问题。但是，经过测试发现问题：
+
 * **无论是Android还是iOS，只要选择在拍照之后，横过来拍，出来的预览图片都是翻转90度的 **
+
 这是相关代码:
+
 HTML (嗯，当时要做那个页面要能让用户最多上传9个图片，我也没想到什么好的动态移动那个添加按钮的办法，就用死办法，先在页面上安置9个按钮，然后添加一个，使原来的那个按钮［加号图片］失效，然后再使下一个显示（机智如我。。。））
-	 <div class="things" id="headimg">
+
+```
+     <div class="things" id="headimg">
 	 <div id="get1" class="addphoto1 " onclick="addphoto(1)">
 	 <img id="photo1" src="Myicon/add icon.png" />
 	 </div>
@@ -52,14 +59,17 @@ HTML (嗯，当时要做那个页面要能让用户最多上传9个图片，我�
 	<img id="photo9" src="Myicon/add icon.png" />
 	</div>
 	</div>
- 
+``` 
+
 JS
-	mui('body').on('shown', '.mui-popover', function(e) {});
-	            mui('body').on('hidden', '.mui-popover', function(e) {});
+ 
+ ```	        
+ mui('body').on('shown', '.mui-popover', function(e) {});
+ mui('body').on('hidden', '.mui-popover', function(e) {});
 	
 	            function addphoto(photoid) {
-	
-	                if (hasClass(imgdiv[photoid - 1], 'transparent')) {} else {
+	                if (hasClass(imgdiv[photoid - 1], 'transparent')) {} 
+	                else {
 	                    var btnArray = [{
 	                        title: "使用手机拍照"
 	                    }, {
@@ -188,11 +198,17 @@ JS
 	                    pic.src = base64;
 	                    newupload();
 	                }
+```	                
+
 ## 解决
+
 ### 一筹莫展
+
 后来，二话不说，毕竟咱在网上最熟练的事儿就是：搜索。我想，今年web app这么火，应该有很多人遇到过这个问题，会有人解答的。但是，真的找不到，当时也不认识大神，也不混社区（现在也没怎么混。。。）所以原来还想搞清原理，但是实在没办法了，之后想了想直接找解决方法。于是想通过判定长与宽的大小来判断照片是竖着拍还是横着拍，然后[通过canvas来实施旋转][4]，但是我也不知道是为什么。后来恰好设计师改了设计稿，上传图片不需要预览了，于是就直接让图片在后端旋转了。于是这个问题一直没解决。。。一晃3，4个月过去了，回忆那时候的岁月，也想到了这个问题。不甘心的滋味涌上心头，于是我又把当时的代码拿出来，测试一下，果然在最新的iOS9上还是这样的。
+
 ### 初见曙光
 又开始了疯狂查找解决资料的过程，后来忙活了一天（虽然有时候有点懒，但是对于有 bug的情况我还是很上心的，记得有次一个bug卡了5天，饭也没怎么吃，觉也没咋睡，天天熬夜，仿佛执念），终于找到了腾讯TGideas的这篇文章：[《H5拍照应用开发经历的那些坑儿》][5]。里面第一个坑就是照片翻转问题
+
 > 问题描述：
 > 手持设备不同方向所拍摄的照片方向不同，照片的方向都会不同，但相册中会自动纠正，这一问题在ios和android中都存在。 
 > 问题解决：
@@ -200,7 +216,9 @@ JS
 > 3.1.2、获取图片的exif信息；（这里我使用了 [Javascript EXIF Reader][7]）
 > 3.1.3、通过图片exif信息，获取图片拍摄时所持设备方向orientation。 
 他的代码
-	// 读取图片数据
+
+```    
+// 读取图片数据
 	var fr = new FileReader();
 	fr.readAsDataURL(file); 
 	
@@ -234,14 +252,23 @@ JS
 	
 	    img.src = result;
 	};
+```
+
 Oh,原来是这个exif在搞鬼，懂了懂了。等等，exif是个什么鬼，于是万能的Google告诉了我答案：[exif][8]（照顾国情，我把链接换成了百度百科的）。总的来说，exif就是一种图片格式，但是它比普通的图片格式多了很多参数，eg.光圈 快门 白平衡，还有就是照片的方向，所以腾讯的大大们就获取了这个参数并将他给了照片，照片就可以像从照片库里选出来的一样，可以正常翻转啦。
 ### 意外发现
 在读他们的代码时，我发现一个FileReader()和readAsDataURL()，原谅我浅薄，虽然眼熟，但是不知道怎么用，于是还是查查查：[FileReader.readAsDataURL()][9]（今天才发现[MDN][10]真是好东西，以后一定要多逛逛，把它用起来）页面里面有个demo
+
 HTML
-	<input type="file" onchange="previewFile()"><br>
+
+```	
+   <input type="file" onchange="previewFile()"><br>
 	<img src="" height="200" alt="Image preview...">
+```
+
 JS
-	function previewFile() {
+
+```	
+     function previewFile() {
 	  var preview = document.querySelector('img');
 	  var file    = document.querySelector('input[type=file]').files[0];
 	  var reader  = new FileReader();
@@ -256,6 +283,8 @@ JS
 	    preview.src = "";
 	  }
 	}
+```
+
 为了看看效果，我在现在电脑上测试之后，顺手用Mac版的HBuilder运行了真机测试（目前还不知道现在用的WebStorm如何做移动端的真机测试，Mark一下，以后再查查），我惊奇的发现，它竟然可以直接识别手机，然后有拍照和照片库两个选项，下面甚至可以关联到我的app:File Manager。而且是手机本身好看的UI，如果你看我原来的代码，就会发现，我原来这个弹出选项，还是用的[HTML5+ API Reference][11]的native UI的选项按钮，比较丑不协调。经过测试，横拍后竟然不翻转了，于是我像发现了新大陆，把所有的按钮换为了input。
 终于把这个问题解决了，处女座表示终于舒服了。。。不然有的照片正，有的照片反，真的难受，哈哈。
 
