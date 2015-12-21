@@ -82,4 +82,4 @@ friends: [
 
 
 gems: [jekyll-paginate]
-
+future: true

@@ -5,8 +5,8 @@
     <description></description>
     <link>bernersh.github.io/</link>
     <atom:link href="bernersh.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 22 Dec 2015 06:53:27 +0800</pubDate>
-    <lastBuildDate>Tue, 22 Dec 2015 06:53:27 +0800</lastBuildDate>
+    <pubDate>Tue, 22 Dec 2015 07:07:26 +0800</pubDate>
+    <lastBuildDate>Tue, 22 Dec 2015 07:07:26 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -380,6 +380,12 @@
   &lt;li&gt;
     &lt;p&gt;配置文件问题。要搞懂_config.yml里面各个变量的&lt;strong&gt;实际意义&lt;/strong&gt;。eg.featured-condition-size这个变量默认配置为1，也就是说起码要有两篇文章是某一个标签，这个标签才会显示在FEATURED TAGS处，我自己就因为这个原因浪费了好多时间。&lt;/p&gt;
   &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;后续添加问题：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;要在yml配置文件里添加 &lt;code&gt;future:true&lt;/code&gt;,否则不能发布超过当天的博文（貌似还有时差，美国时间为准）&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;当你把Jekyll安装完，本地修改调试完，就可以将文件夹commit到你的username.github.io仓库的master下啦。大概过10分钟，你就可以在&lt;strong&gt;username.github.io&lt;/strong&gt;（默认）这个网址下中二地看着自己的博客(孩)页面(子)了。&lt;/p&gt;
