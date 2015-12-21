@@ -5,8 +5,8 @@
     <description></description>
     <link>bernersh.github.io/</link>
     <atom:link href="bernersh.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 17 Dec 2015 06:18:43 +0800</pubDate>
-    <lastBuildDate>Thu, 17 Dec 2015 06:18:43 +0800</lastBuildDate>
+    <pubDate>Tue, 22 Dec 2015 05:10:24 +0800</pubDate>
+    <lastBuildDate>Tue, 22 Dec 2015 05:10:24 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -16,10 +16,9 @@
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;* 终于有个自己的地方，网上的家？&lt;/p&gt;
 
-&lt;p&gt;终于有个自己的地方，网上的家？&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;#build&quot;&gt;直接看实现，gogogo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#build&quot;&gt;直接看博客技术的实现，gogogo&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;一直憧憬着，能够有这么个地方，能够记录有时脑子坏了的自己那些云波诡谲的想法，还有作为一个把全栈工程师当作未来目标的自己对于技术的一点看法和感悟，听和看无数的大牛说过要搞自己的技术博客。而临到想写时，那些CSDN，博客园之类的，可能时和设计师交朋友交得多了，审美也挑剔了起来，觉得那些博客网站太丑了。恰好做的前端，于是一直想自己折腾一个“部落格”，但是一直都太懒了，还有觉得自己水平并不能做出自己满意的作品。&lt;/p&gt;
 
@@ -47,12 +46,9 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;有很多很多的模版供你选择，还可以自己随意更改&lt;/p&gt;
+
+    &lt;p&gt;额，Jekyll＋Github Pages最大的问题。还是&lt;strong&gt;GFW&lt;/strong&gt;(俗称的墙）的问题（手动再见）`&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;额，Jekyll＋Github Pages最大的问题。还是&lt;strong&gt;GFW&lt;/strong&gt;(俗称的墙）的问题（手动再见）&lt;/p&gt;
-
-&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;github服务器访问过慢,不过还好可以忍受&lt;/p&gt;
   &lt;/li&gt;
