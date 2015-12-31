@@ -5,3 +5,5 @@
 
 
 ## If you like Bern3rsH Blog, Please star.Thank you!
+
+[![ghit.me](https://ghit.me/badge.svg?repo=BernersH/BernersH.github.io)](https://ghit.me/repo/BernersH/BernersH.github.io)

@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c05846cf-1290-488a-8165-dbe6a1b09a14" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/head.html" afterPath="$PROJECT_DIR$/_includes/head.html" />
-    </list>
+    <list default="true" id="c05846cf-1290-488a-8165-dbe6a1b09a14" name="Default" comment="" />
     <ignored path="BernersH.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -144,12 +141,12 @@
         <option value="$PROJECT_DIR$/_layouts/post.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_site/2015/12/16/welcome/index.html" />
-        <option value="$PROJECT_DIR$/_posts/2015-12-16-welcome.markdown" />
         <option value="$PROJECT_DIR$/_posts/2015-12-22-takephototurned.markdown" />
         <option value="$PROJECT_DIR$/_posts/2015-12-22-take-photo-turned.markdown" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_posts/2015-12-22-photo.markdown" />
         <option value="$PROJECT_DIR$/_includes/head.html" />
+        <option value="$PROJECT_DIR$/_posts/2015-12-16-welcome.markdown" />
       </list>
     </option>
   </component>
@@ -336,7 +333,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/huxblog-boilerplate" />
+    <property name="last_opened_file_path" value="$USER_HOME$/js-projects/101-clickable-grid" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
