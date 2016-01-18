@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="img/lines-and-angles_madho.svg">
+
+    <title>About Me - 黄新的博客 | Bern3rsH Blog</title>
+
+    <link rel="canonical" href="bernersh.github.io/about/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?d66050042306e97144edf5d467901e1b";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+ <!--下雪插件-->
+    <script src="//fast.eager.io/uUxTEQmoC7.js"></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Ben3rsH Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About Me</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/about-bg.jpeg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>About Me</h1>
+                    <!--<hr class="small">-->
+                    <span class="subheading">Hey, this is Bern3rsH.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        
+
+        <!-- USE SIDEBAR -->
+        <!-- Post Container -->
+        <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+            <!-- Language Selector -->
+<!--<select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese </option>
+    <option value="1"> 英语 English </option>
+</select>-->
+
+<!-- Chinese Version -->
+<div class="zh">
+    <blockquote>
+        给岁月以文明，而不是给文明以岁月
+    </blockquote>
+     一个小小的我.在这个小小的地方.<br>
+    <br>呢喃着只有我自己能懂的呓语.<br>
+    <br>正如同在这个深夜3:27的时候在一大堆html标签中敲下这篇文字,一种很舒服的孤独感笼罩着我.耳机中流淌着<a href="http://music.163.com/#/song?id=30512400">《Love Will Set You Free》</a>
+    主唱沙哑的声音,一次次带过我的耳蜗.抬头瞥见旁边被我当作拓展屏幕的手机,"About Me"的header title闯进来.关于我啊,那就说说关于我的事儿吧.<br>
+    <br>在旁人眼中,也许我是个特别活泼的人儿,总是插科打诨,每天都是疯疯癫癫的,人缘呢,还不错,总是尽力去交各种各样的朋友.可是,总有一些时候,听见心中那个孤独的小孩在喊"让我一个人!",然后整个人就会陷入一种沉默的模式.大大咧咧的社交男孩,孤独的怪小孩,都是我.人嘛,哪有那么容易,那些星座划分的12种人格?本来就是止增笑耳<br>
+    <br>兴趣广泛,自来熟.总是能和各种各样的人,聊各种各样的话题.日剧,日漫,美剧,足球,篮球,天南海北.但是在网上我却下意识得,不喜欢聊自己,这篇呓语旁就有好几个SNS的图标,我却并没有留下几个脚印.一是不愿分享,二是上大学后懒于分享,唯一写了一点点东西的,可能就是<a href="http://www.douban.com/people/Bern3rsH/">豆瓣Bern3rsH</a>吧,刚谈恋爱,特别感性的时候.<br>
+    <br>爱音乐,不分流派,只为耳朵服务;爱电影,不分品种,好看就看;爱动漫,不分题材,少女猎奇;爱科技新闻,各大巨头;爱科幻,大刘特德姜;爱与设计师交朋友,男男女女.装逼怡情,自诩半文艺青年.轻微中二病有时候做事不够潇洒.对一切有逼格的东西不能自拔.Apple的理性粉<br>
+    <br>回顾自己的大学生活,这点点滴滴.不知不觉,就大三了.在长沙的中南大学学计科(计划生育与科学繁殖),然而大一死不用功,从江苏高考中冲出了牢笼,疯玩一年,后大二有所醒悟,补些基础.在大二下15年6月份接触前端,结合技术与美,甚是喜爱,自学没几天被学长拉去做外包.然后在外包那里呆到9月份,从完全不懂得小白起期间走过无数的坑,刚写js一个语法不会,需要什么,全靠google.做的东西在<a href="https://github.com/BernersH">github</a>上有,至今自觉水平还差的很远.<br>
+    <br>目标是一个全栈工程师,JS写的越多,接触越多插件框架设计模式,越觉神奇.喜欢自己捣鼓,研究各种解决方法,对很多东西有充沛的好奇心.<br>
+    <br>时常熬夜,虽知不好,但有时却乐在其中.觉得黑暗中的自己,是the king of the world.<br>
+    <br>也许我从来就不擅长于看自己,这也许不像一个技术博客的自我介绍,这也许只是我自己写给自己看的About me,敲的时候也在感慨,原来我是这样的一个人.<br>
+    <br>喔,是了.我叫 黄新 .我爱前端,希望能写很久很久,它能够越来越好.<br>
+    <br>谢谢你能看完. ありがとう
+</div>
+
+<!-- English Version
+<div class="en">
+
+
+
+</div>-->
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    function onLanChange(index){
+        if(index == 0){
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }else{
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        }
+    }
+    onLanChange(0);
+</script>
+
+
+<!--
+
+
+
+
+
+-->
+
+        </div>
+        <!-- Sidebar Container -->
+        <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+            <!-- Featured Tags -->
+            
+            <section>
+                <hr class="hidden-sm hidden-xs">
+                <h5><a href="">FEATURED TAGS</a></h5>
+                <div class="tags">
+                    
+                    
+                    <a href="/tags/#Life" title="Life" rel="1">
+                        Life
+                    </a>
+                    
+                    
+                    
+                    <a href="/tags/#FE2" title="FE2" rel="2">
+                        FE2
+                    </a>
+                    
+                    
+                    
+                    <a href="/tags/#HTML" title="HTML" rel="1">
+                        HTML
+                    </a>
+                    
+                    
+                    
+                    <a href="/tags/#JS" title="JS" rel="1">
+                        JS
+                    </a>
+                    
+                    
+                    
+                    <a href="/tags/#Mobile" title="Mobile" rel="1">
+                        Mobile
+                    </a>
+                    
+                    
+                </div>
+            </section>
+            
+
+            <!-- Short About -->
+            <section class="visible-md visible-lg">
+                <hr><h5><a href="">ABOUT ME</a></h5>
+                <div class="short-about">
+                    
+                    <img src="/img/avatar-bern3rsh.jpg" />
+                    
+                    
+                    <p>“如果天空总是黑暗，那就摸黑生存；如果发出声音是危险的，那就保持沉默；如果自觉无力发光，那就别去照亮别人。但是，不要习惯了黑暗就为黑暗辩护；不要为自己的苟且而得意洋洋；不要嘲讽那些比自己更勇敢、更有热量的人们。可以卑微如尘土，不可扭曲如蛆虫。”</p>
+                    
+                    <!-- SNS Link -->
+                    <ul class="list-inline">
+                        
+                        
+                        <li>
+                            <a href="https://twitter.com/_bern3rsh">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                            </a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a target="_blank" href="https://www.zhihu.com/people/Bern3rsH">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">知</i>
+                                    </span>
+                            </a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a target="_blank" href="http://weibo.com/bern3rsh">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                                    </span>
+                            </a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com/bern3rsh">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                    </span>
+                            </a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a target="_blank" href="https://github.com/bernersh">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </section>
+            <!-- Friends Blog -->
+            
+            <hr>
+            <h5>FRIENDS</h5>
+            <ul class="list-inline">
+                
+                <li><a href="http://bernersh.github.io">Bern3rsH Blog</a></li>
+                
+            </ul>
+            
+        </div>
+        
+    </div>
+</div>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/_bern3rsh">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/Bern3rsH">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/bern3rsh">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/bern3rsh">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/bernersh">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Ben3rsH Blog 2016
+                    <br>
+                    Theme by <a href=" ">Bern3rsH</a> <!--|
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>-->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+        hljs.initHighlightingOnLoad();
+    })
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+<link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
