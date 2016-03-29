@@ -1,12 +1,12 @@
 ---
-layout:       post 
-title:        "浅尝web app拍照翻转问题"
+layout:       post
+title:        "[前端]浅尝app拍照翻转问题"
 subtitle:     " \"转还是不转，这是一个问题。\""
 date:         2015-12-22 1:12:00
 author:       "Bern3rsH"
-header-img: "img/purple-bg.jpg"
+header-img:   "img/purple-bg.jpg"
 tags:
-      - FE2
+      - FE
       - HTML
       - JS
       - Mobile
@@ -59,16 +59,16 @@ HTML (嗯，当时要做那个页面要能让用户最多上传9个图片，我�
 	 <img id="photo9" src="Myicon/add icon.png" />
 	 </div>
 	 </div>
-``` 
+```
 
 JS
- 
+
 ```	        
  	mui('body').on('shown', '.mui-popover', function(e) {});
  	mui('body').on('hidden', '.mui-popover', function(e) {});
-	
+
 	            function addphoto(photoid) {
-	                if (hasClass(imgdiv[photoid - 1], 'transparent')) {} 
+	                if (hasClass(imgdiv[photoid - 1], 'transparent')) {}
 	                else {
 	                    var btnArray = [{
 	                        title: "使用手机拍照"
@@ -116,11 +116,11 @@ JS
 	                }]
 	            }
 	            var imgflag=0;
-	
+
 	            function getImage(photoid) {
 	                imgflag=1;
-	
-	
+
+
 	                    var cmr = plus.camera.getCamera();
 	                    cmr.captureImage(function(p) {
 	                        plus.io.resolveLocalFileSystemURL(p, function(entry) {
@@ -133,11 +133,11 @@ JS
 	                    });
 	                }
 	                //相册选取
-	
-	
+
+
 	            function galleryImgs(photoid) {
 	                imgflag=0;
-	
+
 	                plus.gallery.pick(function(e) {
 	                    var phototempid = 'photo' + photoid;
 	                    document.getElementById(phototempid).src = e.files;
@@ -146,42 +146,42 @@ JS
 	                });
 	            }
 	            var f1 = null;
-	
+
 	            function appendFile(path, photoid) {
 	                var img = new Image();
 	                img.src = path;
 	                img.onload = function() {
 	                    var that = this;
-	                    //生成比例 
+	                    //生成比例
 	                    var w = that.width,
 	                        h = that.height,
 	                        scale = w / h;
-	
+
 	                    w = 480 || w;
 	                    h = w / scale;
 	                    //生成canvas
-	
-	
+
+
 	                    var canvas = document.createElement('canvas');
-	
+
 	                    var ctx = canvas.getContext('2d');
 	                    $(canvas).attr({
 	                        width: w,
 	                        height: h
 	                    });
 	                    //旋转
-	
-	
-	
-	
-	
+
+
+
+
+
 	    var image1 = new Image();
-	
+
 	      // regular rotation about center
 	      var xpos = canvas.width/2;
 	      var ypos = canvas.height/2;
 	      ctx.drawImage(image1, xpos - image1.width / 2, ypos - image1.height / 2);
-	
+
 	      ctx.translate(xpos, ypos);
 	      ctx.rotate(450* Math.PI / 180);//旋转450度
 	      ctx.translate(-xpos, -ypos);
@@ -189,7 +189,7 @@ JS
 	    //旋转结束
 	            };  
 	                ctx.drawImage(that, 0, 0, w, h);
-	
+
 	                    var base64 = canvas.toDataURL('image/jpeg', 0.6 || 0.6); //1最清晰，越低越模糊。
 	                    f1 = base64;
 	                    f1 = f1.replace(/data:image\/jpeg;base64,/, "");
@@ -199,7 +199,7 @@ JS
 	                    newupload();
 	                }
 ```
-	                
+
 ## 解决
 
 #### 一筹莫展
@@ -210,21 +210,21 @@ JS
 又开始了疯狂查找解决资料的过程，后来忙活了一天（虽然有时候有点懒，但是对于有 bug的情况我还是很上心的，记得有次一个bug卡了5天，饭也没怎么吃，觉也没咋睡，天天熬夜，仿佛执念），终于找到了腾讯TGideas的这篇文章：[《H5拍照应用开发经历的那些坑儿》][5]。里面第一个坑就是照片翻转问题:
 
 >  问题描述：
->  手持设备不同方向所拍摄的照片方向不同，照片的方向都会不同，但相册中会自动纠正，这一问题在ios和android中都存在。 
+>  手持设备不同方向所拍摄的照片方向不同，照片的方向都会不同，但相册中会自动纠正，这一问题在ios和android中都存在。
 
 >  问题解决：
 >1、将图片数据转换成二进制数据，方便获取图片的exif信息；（这里我引入了 [Binary Ajax][6]）
 >2、获取图片的exif信息；（这里我使用了 [Javascript EXIF Reader][7]）
->3、通过图片exif信息，获取图片拍摄时所持设备方向orientation。 
+>3、通过图片exif信息，获取图片拍摄时所持设备方向orientation。
 
 他的代码
 
 ```    
 // 读取图片数据
 	var fr = new FileReader();
-	fr.readAsDataURL(file); 
-	
-	fr.onload = function(fe){ 
+	fr.readAsDataURL(file);
+
+	fr.onload = function(fe){
 	    var result = this.result;
 	    var img = new Image();
 	 var exif;
@@ -232,26 +232,26 @@ JS
 	        var orientation = exif ? exif.Orientation : 1;
 	        // 判断拍照设备持有方向调整照片角度
 	        switch(orientation) {
-	            case 3: 
-	                imgRotation = 180; 
+	            case 3:
+	                imgRotation = 180;
 	                break;
-	            case 6: 
-	                imgRotation = 90; 
+	            case 6:
+	                imgRotation = 90;
 	                break;
-	            case 8: 
-	                imgRotation = 270; 
+	            case 8:
+	                imgRotation = 270;
 	            break;
 	        }
 	    };
-	
+
 	    // 转换二进制数据
 	    var base64 = result.replace(/^.*?,/,'');
-	    var binary = atob(base64); 
+	    var binary = atob(base64);
 	    var binaryData = new BinaryFile(binary);
-	
+
 	    // 获取exif信息
 	    exif = EXIF.readFromBinaryFile(binaryData);
-	
+
 	    img.src = result;
 	};
 ```
@@ -263,23 +263,23 @@ Oh,原来是这个exif在搞鬼，懂了懂了。等等，exif是个什么鬼，
 
 HTML
 
-```	
+```
 	<input type="file" onchange="previewFile()"><br>
 	<img src="" height="200" alt="Image preview...">
 ```
 
 JS
 
-```	
+```
      function previewFile() {
 	  var preview = document.querySelector('img');
 	  var file    = document.querySelector('input[type=file]').files[0];
 	  var reader  = new FileReader();
-	
+
 	  reader.onloadend = function () {
 	    preview.src = reader.result;
 	  }
-	
+
 	  if (file) {
 	    reader.readAsDataURL(file);
 	  } else {

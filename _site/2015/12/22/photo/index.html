@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="keyword"  content="">
-    <link rel="shortcut icon" href="img/12345.icon">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 
-    <title>浅尝web app拍照翻转问题 - 黄新的博客 | Bern3rsH Blog</title>
+    <title>[前端]浅尝app拍照翻转问题 - 黄新的博客 | Bern3rsH Blog</title>
 
     <link rel="canonical" href="bernersh.github.io/2015/12/22/photo/">
 
@@ -147,7 +147,7 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#FE2" title="FE2">FE2</a>
+                        <a class="tag" href="/tags/#FE" title="FE">FE</a>
                         
                         <a class="tag" href="/tags/#HTML" title="HTML">HTML</a>
                         
@@ -156,7 +156,7 @@
                         <a class="tag" href="/tags/#Mobile" title="Mobile">Mobile</a>
                         
                     </div>
-                    <h1>浅尝web app拍照翻转问题</h1>
+                    <h1>[前端]浅尝app拍照翻转问题</h1>
                     
                     
                     <h2 class="subheading"> "转还是不转，这是一个问题。"</h2>
@@ -233,9 +233,9 @@
 
 <pre><code> 	mui('body').on('shown', '.mui-popover', function(e) {});
  	mui('body').on('hidden', '.mui-popover', function(e) {});
-	
+
 	            function addphoto(photoid) {
-	                if (hasClass(imgdiv[photoid - 1], 'transparent')) {} 
+	                if (hasClass(imgdiv[photoid - 1], 'transparent')) {}
 	                else {
 	                    var btnArray = [{
 	                        title: "使用手机拍照"
@@ -283,11 +283,11 @@
 	                }]
 	            }
 	            var imgflag=0;
-	
+
 	            function getImage(photoid) {
 	                imgflag=1;
-	
-	
+
+
 	                    var cmr = plus.camera.getCamera();
 	                    cmr.captureImage(function(p) {
 	                        plus.io.resolveLocalFileSystemURL(p, function(entry) {
@@ -300,11 +300,11 @@
 	                    });
 	                }
 	                //相册选取
-	
-	
+
+
 	            function galleryImgs(photoid) {
 	                imgflag=0;
-	
+
 	                plus.gallery.pick(function(e) {
 	                    var phototempid = 'photo' + photoid;
 	                    document.getElementById(phototempid).src = e.files;
@@ -313,42 +313,42 @@
 	                });
 	            }
 	            var f1 = null;
-	
+
 	            function appendFile(path, photoid) {
 	                var img = new Image();
 	                img.src = path;
 	                img.onload = function() {
 	                    var that = this;
-	                    //生成比例 
+	                    //生成比例
 	                    var w = that.width,
 	                        h = that.height,
 	                        scale = w / h;
-	
+
 	                    w = 480 || w;
 	                    h = w / scale;
 	                    //生成canvas
-	
-	
+
+
 	                    var canvas = document.createElement('canvas');
-	
+
 	                    var ctx = canvas.getContext('2d');
 	                    $(canvas).attr({
 	                        width: w,
 	                        height: h
 	                    });
 	                    //旋转
-	
-	
-	
-	
-	
+
+
+
+
+
 	    var image1 = new Image();
-	
+
 	      // regular rotation about center
 	      var xpos = canvas.width/2;
 	      var ypos = canvas.height/2;
 	      ctx.drawImage(image1, xpos - image1.width / 2, ypos - image1.height / 2);
-	
+
 	      ctx.translate(xpos, ypos);
 	      ctx.rotate(450* Math.PI / 180);//旋转450度
 	      ctx.translate(-xpos, -ypos);
@@ -356,7 +356,7 @@
 	    //旋转结束
 	            };  
 	                ctx.drawImage(that, 0, 0, w, h);
-	
+
 	                    var base64 = canvas.toDataURL('image/jpeg', 0.6 || 0.6); //1最清晰，越低越模糊。
 	                    f1 = base64;
 	                    f1 = f1.replace(/data:image\/jpeg;base64,/, "");
@@ -392,9 +392,9 @@
 
 <pre><code>// 读取图片数据
 	var fr = new FileReader();
-	fr.readAsDataURL(file); 
-	
-	fr.onload = function(fe){ 
+	fr.readAsDataURL(file);
+
+	fr.onload = function(fe){
 	    var result = this.result;
 	    var img = new Image();
 	 var exif;
@@ -402,26 +402,26 @@
 	        var orientation = exif ? exif.Orientation : 1;
 	        // 判断拍照设备持有方向调整照片角度
 	        switch(orientation) {
-	            case 3: 
-	                imgRotation = 180; 
+	            case 3:
+	                imgRotation = 180;
 	                break;
-	            case 6: 
-	                imgRotation = 90; 
+	            case 6:
+	                imgRotation = 90;
 	                break;
-	            case 8: 
-	                imgRotation = 270; 
+	            case 8:
+	                imgRotation = 270;
 	            break;
 	        }
 	    };
-	
+
 	    // 转换二进制数据
 	    var base64 = result.replace(/^.*?,/,'');
-	    var binary = atob(base64); 
+	    var binary = atob(base64);
 	    var binaryData = new BinaryFile(binary);
-	
+
 	    // 获取exif信息
 	    exif = EXIF.readFromBinaryFile(binaryData);
-	
+
 	    img.src = result;
 	};
 </code></pre>
@@ -443,11 +443,11 @@
 	  var preview = document.querySelector('img');
 	  var file    = document.querySelector('input[type=file]').files[0];
 	  var reader  = new FileReader();
-	
+
 	  reader.onloadend = function () {
 	    preview.src = reader.result;
 	  }
-	
+
 	  if (file) {
 	    reader.readAsDataURL(file);
 	  } else {
@@ -478,16 +478,15 @@
 
 
                 
-
+                <!-- 百度分享 start-->
                 <div class="bdsharebuttonbox">
-                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-                <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
                 <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
                 <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
                 <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
                 <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+                <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
                 </div>
-
+                <!-- 百度分享 end-->
 
 
 
@@ -497,6 +496,10 @@
                         <a href="/2015/12/16/welcome/" data-toggle="tooltip" data-placement="top" title="Glad to see you here">&larr; Previous Post</a>
                     </li>
                     
+                    
+                    <li class="next">
+                        <a href="/2016/03/29/game/" data-toggle="tooltip" data-placement="top" title="[杂谈]毕竟，人也不是生来就是世界的霸主">Next Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
@@ -523,25 +526,25 @@
                     <div class="tags">
         				
                             
-                				<a href="/tags/#Life" title="Life" rel="1">
-                                    Life
+                				<a href="/tags/#杂谈" title="杂谈" rel="2">
+                                    杂谈
                                 </a>
                             
         				
                             
-                				<a href="/tags/#FE2" title="FE2" rel="2">
-                                    FE2
+                				<a href="/tags/#FE" title="FE" rel="6">
+                                    FE
                                 </a>
                             
         				
                             
-                				<a href="/tags/#HTML" title="HTML" rel="1">
+                				<a href="/tags/#HTML" title="HTML" rel="5">
                                     HTML
                                 </a>
                             
         				
                             
-                				<a href="/tags/#JS" title="JS" rel="1">
+                				<a href="/tags/#JS" title="JS" rel="2">
                                     JS
                                 </a>
                             
@@ -549,6 +552,24 @@
                             
                 				<a href="/tags/#Mobile" title="Mobile" rel="1">
                                     Mobile
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#Game" title="Game" rel="1">
+                                    Game
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#IFE" title="IFE" rel="4">
+                                    IFE
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#CSS" title="CSS" rel="3">
+                                    CSS
                                 </a>
                             
         				
@@ -631,7 +652,6 @@
         }
     }
 </style>
-
 
 
 

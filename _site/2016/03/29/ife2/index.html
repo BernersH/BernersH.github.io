@@ -10,9 +10,9 @@
     <meta name="keyword"  content="">
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 
-    <title>Glad to see you here - 黄新的博客 | Bern3rsH Blog</title>
+    <title>[IFE]百度IFE前端技术学院任务二笔记 - 黄新的博客 | Bern3rsH Blog</title>
 
-    <link rel="canonical" href="bernersh.github.io/2015/12/16/welcome/">
+    <link rel="canonical" href="bernersh.github.io/2016/03/29/ife2/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -131,13 +131,13 @@
 
     <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="/img/welcome-bg.jpeg" width="0" height="0"> -->
+<!-- <img src="/img/ife-bg.jpeg" width="0" height="0"> -->
 
 <!-- Post Header -->
 
 <style type="text/css">
     header.intro-header{
-        background-image: url('/img/welcome-bg.jpeg')
+        background-image: url('/img/ife-bg.jpeg')
     }
 </style>
 <header class="intro-header" >
@@ -147,17 +147,21 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#杂谈" title="杂谈">杂谈</a>
+                        <a class="tag" href="/tags/#IFE" title="IFE">IFE</a>
                         
                         <a class="tag" href="/tags/#FE" title="FE">FE</a>
                         
+                        <a class="tag" href="/tags/#HTML" title="HTML">HTML</a>
+                        
+                        <a class="tag" href="/tags/#CSS" title="CSS">CSS</a>
+                        
                     </div>
-                    <h1>Glad to see you here</h1>
+                    <h1>[IFE]百度IFE前端技术学院任务二笔记</h1>
                     
                     
-                    <h2 class="subheading">"I have been waiting for you here for a long time"</h2>
+                    <h2 class="subheading"> "少见的CSS属性 子类选择器和CSS书写习惯 图片和导航栏居中 浏览器默认样式"</h2>
                     
-                    <span class="meta">Posted by Bern3rsH on December 16, 2015</span>
+                    <span class="meta">Posted by Bern3rsH on March 29, 2016</span>
                 </div>
             </div>
         </div>
@@ -176,94 +180,95 @@
                 post-container">
 
 				<blockquote>
-  <p>“前进！不择手段地前进！！”</p>
+  <p>一直对<a href="http://ife.baidu.com/" target="_blank">百度IFE前端技术学院</a>这件事很赞赏，觉得他们是做了一件很好的事。而做任务的过程中，真的发现了蛮多小的点，自己以前放过了，争取现在加油打牢基础。诶，白天课还挺多，只能晚上加油啦。我尽量把遇到的问题和解决方法都列出来吧，弱渣一枚，大家共勉。感谢百度吧，提供这样的一次机会，前两季班都开了个头就因为时间问题放弃了，希望这一次可以真正去提升自己。希望大家多去<a href="http://ife.baidu.com/group/profile?groupId=440" target="_blank">中南前端</a>，去review我们，谢谢啦。现在我将我在那里的学习笔记同步过来。</p>
 </blockquote>
 
-<h2 id="section">前言</h2>
-<p>终于有个自己的地方，网上的家？</p>
+<p>任务二：零基础HTML及CSS编码（一）<br />
+<a href="http://ife.baidu.com/task/detail?taskId=2" target="_blank">任务</a><br />
+<a href="https://github.com/BernersH/baidu-ife-2016-spring/tree/master/2" target="_blank">代码</a><br />
+<a href="http://bernersh.github.io/baidu-ife-2016-spring/2/index.html" target="_blank">demo</a></p>
 
-<p><a href="#build">直接看博客技术的实现，gogogo</a></p>
-
-<p>一直憧憬着，能够有这么个地方，能够记录有时脑子坏了的自己那些云波诡谲的想法，还有作为一个把全栈工程师当作未来目标的自己对于技术的一点看法和感悟，听和看无数的大牛说过要搞自己的技术博客。而临到想写时，那些CSDN，博客园之类的，可能时和设计师交朋友交得多了，审美也挑剔了起来，觉得那些博客网站太丑了。恰好做的前端，于是一直想自己折腾一个“部落格”，但是一直都太懒了，还有觉得自己水平并不能做出自己满意的作品。</p>
-
-<p>直到想要去公司寒假实习的时候，猛然发现自己没有什么拿得出手的东西，仅仅只有github上那几个差劲的项目。慌张起来，于是花了几天，也算是了却一桩心愿，以后也有了自己的“自留地”。</p>
-
-<p id="build"></p>
-
-<hr />
-
-<h2 id="section-1">技术实现</h2>
-
-<p>暑假的时候也动过写博客的念头，因后来忙于外包，也就没时间做，放弃了。不过也google了许多相关的资料，以前就很喜欢看阮老师的博客，恰巧里面有一篇<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">《搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门》</a>觉得很对胃口，于是就决定使用<a href="http://jekyllrb.com/">Jekyll</a>+<a href="https://pages.github.com/">Github Pages</a>来搭建我的“小窝”。这是Jekyll的<a href="http://jekyllcn.com/">中文文档网站</a>,里面详细介绍了关于jekyll的一些指令和配置。</p>
-
-<p>这样做的好处，显而易见：</p>
-
+<h2 id="section">技术点</h2>
 <ul>
   <li>
-    <p><strong>Markdown</strong> 对于我来说，这是一个很好的契机去学习这门让我的写作变得优雅起来的语言，名号早已如雷贯耳，却一直没用过。<a href="http://wowubuntu.com/markdown/">Markdown语法说明</a>而Github Pages推荐使用的Markdown解释器是kramdown，与一般的Markdown语法又有所不同，但也不需要过分纠结。这是<a href="https://github.com/flyaway1217/flyaway1217.github.com/blob/master/_drafts/Kramdown-Syntax.md">kramdown的中文文档</a>(这是我从别人Github Pages博客的draft(草稿)里找到的，我也是蛮拼的)。</p>
-  </li>
-  <li>
-    <p>无需<strong>数据库</strong>、<strong>评论功能</strong>，不需要不断的更新版本——只用关心你的博客内容。</p>
-  </li>
-  <li>
-    <p>只需使用Github的发布功能，就<strong>Blog Post</strong>,加深了Github的使用（虽然我基本都是用的Mac的Github桌面版。。。）</p>
-  </li>
-  <li>
-    <p>有很多很多的模版供你选择，还可以自己随意更改</p>
+    <p><strong>少见的CSS属性</strong>可能也不叫少见吧，我自己以前用的少的一些属性。</p>
 
-    <p>额，Jekyll＋Github Pages最大的问题。还是<strong>GFW</strong>(俗称的墙）的问题（手动再见）`</p>
+    <ul>
+      <li><code>box-shadow</code> 用来显示页面边缘阴影，<a href="http://www.w3school.com.cn/cssref/pr_box-shadow.asp" target="_blank">W3CSchool</a>上有挺好的介绍</li>
+      <li><code>text-indent</code> 用来进行段落缩进，同样是<a href="http://www.w3school.com.cn/cssref/pr_text_text-indent.asp" target="_blank">W3CSchool</a>可以在需要缩进的段落<code>p</code>标签中添加text-indent类，然后在CSS里添加相关样式，比较灵活</li>
+    </ul>
   </li>
   <li>
-    <p>github服务器访问过慢,不过还好可以忍受</p>
-  </li>
-  <li>
-    <p>Jekyll的默认插件Disqus使用的都是国内无法使用的Facebook,Twitter等的帐号，而国内的评论插件多说，有言等的评论框真的太丑了。。。稍微逼格高点的模版就会有深深的违和感，所以暂时还没有做评论，以后考虑考虑再说,我试用了<a href="http://share.baidu.com/">百度分享</a>来做分享功能，十分方便，只要在post布局页面插入HTML和JS语句即可，会自动变成图标进行分享，唯一的不足可能是灰色主题的微信图标有bug（见<a href="#bug">文底</a>)和印象笔记图标不显示（手动再见）</p>
-  </li>
-  <li>
-    <p>Jekyll的安装在国内真心太慢了，我目前翻墙只是用<a href="https://github.com/XX-net/XX-Net">XX-Net</a>配合Chrome里的<a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?utm_source=chrome-ntp-icon">Proxy SwitchyOmega</a>插件，没有全局的VPN，所以按照Jekyll文档安装的时候速度奇慢，貌似是被墙了</p>
+    <p><strong>子类选择器和CSS书写习惯</strong></p>
   </li>
 </ul>
 
-<p>下面就是我遇到几个<strong>问题</strong>:</p>
+<p>以前写CSS的习惯不太好吧，总是不断加类加类，代码会变得冗长，这一次特地注意了灵活运用各种选择器还有书写不同选择器下相同样式，尽量写在一起，这样方便后期一次性修改迭代。这一次用了蛮多次子类选择器<code>:firstchild</code>,<code>:lastchild</code>等等，感觉还是挺好用的，因为我用的表格样式来设定表单，所以用<code>.form-table tr td:first-child</code>来一次性选择表单所有的标签部分，挺方便的。还有个注意点，就是子类选择器必须在一个相邻父元素下面才可以选择，而且<code>:firstchild</code>,<code>:lastchild</code>前面的内容就是你要选择的那一类的，<code>li</code>啊，<code>td</code>啊等等，而不是他们的父元素。</p>
 
 <ul>
-  <li>
-    <p>安装Jekyll。<a href="http://jekyll.bootcss.com/docs/installation/">Jekyll的安装文档</a>里面说的是用<code>gem install jekyll</code>来安装，然后Mac自带了Ruby和gem。但是，现实是残酷的，怎么也不成功。后来在<a href="http://www.cnblogs.com/kaiye/archive/2013/04/24/3039345.html">Mac下搭建jekyll环境</a>里才发现自带的版本是过低的，无法安装Jekyll，而且后来需要替换成淘宝的镜像才能正常速度安装Jekyll。具体操作他的博文里都有</p>
-  </li>
-  <li>
-    <p>用的别人的模版配置问题。我的博客大的主题是fork的<a href="https://github.com/Huxpro/huxblog-boilerplate">Hux同学（学习的榜样）Blog的Boilerplate</a>，但是在配置的时候要注意_config.yml里的url和baseurl。<strong>你是用户和组织的站点（username.github.io)下master的分支还是username.github.io下的新建项目的分支</strong>。 如果是前者，那么直接将Jekyll的文件夹commit到master分支上;如果是后者，先在username.github.io下添加gh-pages分支，然后在_config.yml里在baseurl添加/project-name（注意必须存在头部的斜杠以及不能有尾部的斜杠。）还有就是Jekyll的本地文件夹里的CNAME记得修改为自己博客的网址，不然Github在build你的页面的时候会失败，发邮件给你（亲测，哈哈)。</p>
-  </li>
-  <li>
-    <p>文件编码问题。貌似因为Jekyll的编码问题，所以博文的标题是不能用中文的，而且整个博文的编码也必须是UTF-8，windows平台记得不能带BOM字符。我就因为不小心用sublime打开了博文，改变了编码导致全部乱码，而且Github Pages也是无法识别非UTF-8编码的文章，因为这个又收到亲爱的Github的邮。（它一定是爱上我了，嗯，准是这样）</p>
-  </li>
-  <li>
-    <p>配置文件问题。要搞懂_config.yml里面各个变量的<strong>实际意义</strong>。eg.featured-condition-size这个变量默认配置为1，也就是说起码要有两篇文章是某一个标签，这个标签才会显示在FEATURED TAGS处，我自己就因为这个原因浪费了好多时间。</p>
-  </li>
+  <li><strong>图片和导航垂直居中</strong></li>
 </ul>
 
-<p>后续添加问题：</p>
+<p>在看设计稿的时候，上面的百度logo是垂直居中的，很容易想到用<code>vertical-align</code>属性，但是图片不是类似inline-block这种软布局，<code>vertical-align</code>属性是起不了作用的，所以我们在img外面套一个<code>span</code>标签，然后设置<code>header</code>部分<code>display:table</code>,<code>span</code>部分 <code>display:table-cell</code>，再设置<code>vertical-align:middle</code>就行了。然后我在查相关问题的时候，发现一个可以很好垂直对齐多个图片的方法，<a href="http://www.zhangxinxu.com/wordpress/2009/08/%E5%A4%A7%E5%B0%8F%E4%B8%8D%E5%9B%BA%E5%AE%9A%E7%9A%84%E5%9B%BE%E7%89%87%E3%80%81%E5%A4%9A%E8%A1%8C%E6%96%87%E5%AD%97%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/#zhangxinxu_1" target="_blank">张鑫旭的博客</a>，推荐他的博客，我有许多CSS相关的都是从他的博客看到，讲的都很细，而且全面，各种情况都会考虑。里面的思想还可以用在后面的导航文字垂直居中中，设置<code>a</code>标签<code>display:inline-block</code>，就可以愉快得使用各种居中属性啦。</p>
 
 <ul>
-  <li>要在yml配置文件里添加 <code>future:true</code>,否则不能发布超过当天的博文（貌似还有时差，美国时间为准）</li>
+  <li><strong>浏览器默认样式</strong></li>
 </ul>
 
-<p>当你把Jekyll安装完，本地修改调试完，就可以将文件夹commit到你的username.github.io仓库的master下啦。大概过10分钟，你就可以在<strong>username.github.io</strong>（默认）这个网址下中二地看着自己的博客(孩)页面(子)了。</p>
+<p>许多人喜欢直接在页面前加<code>margin:0</code>,<code>padding:0</code>来解决浏览器的默认样式问题，其实以前我也没有太多考虑这个方面的问题，但是因为我导航栏是一个ul列表里，然后死活对不齐，所以我在查浏览器的属性的时候，一个<code>ul</code>的默认<code>margin</code>映入眼帘，好吧，没办法了，这个属性设置为0吧，但这样也不是办法啊，所以搜了个来自淘宝的初始化浏览器样式的代码段。我现在都用的这个</p>
 
-<p>Good luck!</p>
+<pre><code class="language-css">/*样式初始化 from taobao */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+  margin: 0;
+  padding: 0;
+}
+body, button, input, select, textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+code, kbd, pre, samp {
+  font-family: couriernew, courier, monospace;
+}
+small {
+  font-size: 12px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset, img {
+  border: 0;
+}
+button, input, select, textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+</code></pre>
 
-<hr />
+<p>你以为这样就好了？too naive.在下面的图片流里，图片总是冒到li的边框外面去，又查才发现是figure的默认属性 <code>-webkit-margin-start: 40px;</code><br />
+  <code>-webkit-margin-end: 40px;</code>这哥俩在搞鬼，没办法设置为0了，才正常了。这一通折腾，真切让我觉得，浏览器的标准化，何其任重。</p>
 
-<h2 id="section-2">后记</h2>
-
-<p>这是我第一次写markdown的文档（囧），一边看一边要查询语法，也是第一次写这种教授类的文章，觉得更加佩服那些写了很多博文的技术大牛。写的时候你需要不断回忆当时所遇到的问题，还要去找一下当时解决所用的网址和方法。但是在搭建这个博客的过程中，也学习了很多，更熟练的用Boostrap，用Jekyll的layout可以快速定制每个页面的排版等。</p>
-
-<p>正是这样，一篇小小的开博文，几乎耗去了我一个下午的时间。。。于是以后一定要养成遇到问题随手把问题和解决方法记录在Evernote上，然后觉得有价值的来这里与大家分享。希望自己能够坚持把，虽然现在关于前端的博客一大把。。。但是，我会竭尽我自己一点小小的能力写出一点东西(比如这个博客本身的代码实现我有些地方还不太明白，研究之后再写一点东西）。这如最前面所说的<a href="http://book.douban.com/subject/2567698/">《三体》</a>里的名言”前进!不择手段的前进!!”，也不枉现在度过的这些美好的青春时光。</p>
-
-<p>以上。</p>
-
-<p id="bug"></p>
-<p>－－Bern3rsH写于2015.12.16</p>
-
+<h2 id="section-1">感想</h2>
+<p>以前觉得自己CSS还不错，但是经过这个简单页面的过了一遍，觉得还有很多很多要学啊，汗颜。很多浏览器兼容问题，还有一些奇技淫巧，值得我们不断去深挖。加油吧！</p>
 
 
                 <hr>
@@ -290,9 +295,13 @@
 
                 <ul class="pager">
                     
+                    <li class="previous">
+                        <a href="/2016/03/29/ife1/" data-toggle="tooltip" data-placement="top" title="[IFE]百度IFE前端技术学院任务一笔记">&larr; Previous Post</a>
+                    </li>
+                    
                     
                     <li class="next">
-                        <a href="/2015/12/22/photo/" data-toggle="tooltip" data-placement="top" title="[前端]浅尝app拍照翻转问题">Next Post &rarr;</a>
+                        <a href="/2016/03/29/ife3/" data-toggle="tooltip" data-placement="top" title="[IFE]百度IFE前端技术学院任务三笔记">Next Post &rarr;</a>
                     </li>
                     
                 </ul>

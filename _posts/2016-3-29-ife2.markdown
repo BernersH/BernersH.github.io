@@ -1,0 +1,92 @@
+---
+layout:       post
+title:        "[IFE]百度IFE前端技术学院任务二笔记"
+subtitle:     " \"少见的CSS属性 子类选择器和CSS书写习惯 图片和导航栏居中 浏览器默认样式\""
+date:         2016-3-29 9:20:00
+author:       "Bern3rsH"
+header-img:   "img/ife-bg.jpeg"
+tags:
+      - IFE
+      - FE
+      - HTML
+      - CSS
+---
+
+>一直对[百度IFE前端技术学院](http://ife.baidu.com/){:target="_blank"}这件事很赞赏，觉得他们是做了一件很好的事。而做任务的过程中，真的发现了蛮多小的点，自己以前放过了，争取现在加油打牢基础。诶，白天课还挺多，只能晚上加油啦。我尽量把遇到的问题和解决方法都列出来吧，弱渣一枚，大家共勉。感谢百度吧，提供这样的一次机会，前两季班都开了个头就因为时间问题放弃了，希望这一次可以真正去提升自己。希望大家多去[中南前端](http://ife.baidu.com/group/profile?groupId=440){:target="_blank"}，去review我们，谢谢啦。现在我将我在那里的学习笔记同步过来。
+
+任务二：零基础HTML及CSS编码（一）
+[任务](http://ife.baidu.com/task/detail?taskId=2){:target="_blank"}
+[代码](https://github.com/BernersH/baidu-ife-2016-spring/tree/master/2){:target="_blank"}
+[demo](http://bernersh.github.io/baidu-ife-2016-spring/2/index.html){:target="_blank"}
+
+## 技术点
+* **少见的CSS属性**可能也不叫少见吧，我自己以前用的少的一些属性。
+
+  - `box-shadow` 用来显示页面边缘阴影，[W3CSchool](http://www.w3school.com.cn/cssref/pr_box-shadow.asp){:target="_blank"}上有挺好的介绍
+  - `text-indent` 用来进行段落缩进，同样是[W3CSchool](http://www.w3school.com.cn/cssref/pr_text_text-indent.asp){:target="_blank"}可以在需要缩进的段落`p`标签中添加text-indent类，然后在CSS里添加相关样式，比较灵活
+
+* **子类选择器和CSS书写习惯**
+
+以前写CSS的习惯不太好吧，总是不断加类加类，代码会变得冗长，这一次特地注意了灵活运用各种选择器还有书写不同选择器下相同样式，尽量写在一起，这样方便后期一次性修改迭代。这一次用了蛮多次子类选择器`:firstchild`,`:lastchild`等等，感觉还是挺好用的，因为我用的表格样式来设定表单，所以用`.form-table tr td:first-child`来一次性选择表单所有的标签部分，挺方便的。还有个注意点，就是子类选择器必须在一个相邻父元素下面才可以选择，而且`:firstchild`,`:lastchild`前面的内容就是你要选择的那一类的，`li`啊，`td`啊等等，而不是他们的父元素。
+
+* **图片和导航垂直居中**
+
+在看设计稿的时候，上面的百度logo是垂直居中的，很容易想到用`vertical-align`属性，但是图片不是类似inline-block这种软布局，`vertical-align`属性是起不了作用的，所以我们在img外面套一个`span`标签，然后设置`header`部分`display:table`,`span`部分 `display:table-cell`，再设置`vertical-align:middle`就行了。然后我在查相关问题的时候，发现一个可以很好垂直对齐多个图片的方法，[张鑫旭的博客](http://www.zhangxinxu.com/wordpress/2009/08/%E5%A4%A7%E5%B0%8F%E4%B8%8D%E5%9B%BA%E5%AE%9A%E7%9A%84%E5%9B%BE%E7%89%87%E3%80%81%E5%A4%9A%E8%A1%8C%E6%96%87%E5%AD%97%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/#zhangxinxu_1){:target="_blank"}，推荐他的博客，我有许多CSS相关的都是从他的博客看到，讲的都很细，而且全面，各种情况都会考虑。里面的思想还可以用在后面的导航文字垂直居中中，设置`a`标签`display:inline-block`，就可以愉快得使用各种居中属性啦。
+
+* **浏览器默认样式**
+
+许多人喜欢直接在页面前加`margin:0`,`padding:0`来解决浏览器的默认样式问题，其实以前我也没有太多考虑这个方面的问题，但是因为我导航栏是一个ul列表里，然后死活对不齐，所以我在查浏览器的属性的时候，一个`ul`的默认`margin`映入眼帘，好吧，没办法了，这个属性设置为0吧，但这样也不是办法啊，所以搜了个来自淘宝的初始化浏览器样式的代码段。我现在都用的这个
+
+```css
+/*样式初始化 from taobao */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+  margin: 0;
+  padding: 0;
+}
+body, button, input, select, textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+code, kbd, pre, samp {
+  font-family: couriernew, courier, monospace;
+}
+small {
+  font-size: 12px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset, img {
+  border: 0;
+}
+button, input, select, textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+```
+
+你以为这样就好了？too naive.在下面的图片流里，图片总是冒到li的边框外面去，又查才发现是figure的默认属性 `-webkit-margin-start: 40px;`
+  `-webkit-margin-end: 40px;`这哥俩在搞鬼，没办法设置为0了，才正常了。这一通折腾，真切让我觉得，浏览器的标准化，何其任重。
+
+## 感想
+以前觉得自己CSS还不错，但是经过这个简单页面的过了一遍，觉得还有很多很多要学啊，汗颜。很多浏览器兼容问题，还有一些奇技淫巧，值得我们不断去深挖。加油吧！

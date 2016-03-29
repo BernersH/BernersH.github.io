@@ -1,0 +1,125 @@
+---
+layout:       post
+title:        "[IFE]百度IFE前端技术学院任务三笔记"
+subtitle:     " \"三栏式布局 自身浮动，绝对定位，margin负值三种方式具体实现\""
+date:         2016-3-29 10:20:00
+author:       "Bern3rsH"
+header-img:   "img/ife-bg.jpeg"
+tags:
+      - IFE
+      - FE
+      - HTML
+      - CSS
+---
+
+>一直对[百度IFE前端技术学院](http://ife.baidu.com/){:target="_blank"}这件事很赞赏，觉得他们是做了一件很好的事。而做任务的过程中，真的发现了蛮多小的点，自己以前放过了，争取现在加油打牢基础。诶，白天课还挺多，只能晚上加油啦。我尽量把遇到的问题和解决方法都列出来吧，弱渣一枚，大家共勉。感谢百度吧，提供这样的一次机会，前两季班都开了个头就因为时间问题放弃了，希望这一次可以真正去提升自己。希望大家多去[中南前端](http://ife.baidu.com/group/profile?groupId=440){:target="_blank"}，去review我们，谢谢啦。现在我将我在那里的学习笔记同步过来。
+
+任务三：三栏式布局
+
+[任务](http://ife.baidu.com/task/detail?taskId=3){:target="_blank"}
+[代码](https://github.com/BernersH/baidu-ife-2016-spring/tree/gh-pages/3){:target="_blank"}
+[demo](http://bernersh.github.io/baidu-ife-2016-spring/3/index.html){:target="_blank"}
+
+
+## 前言
+
+看到这个三栏布局，以前就知道可以用自身浮动法和绝对定位法。早有耳闻有margin负值法，貌似淘宝就是采用的这个方法。在代码里我将三种方法都写了，下面我就略写一写三种方法的具体实现方法。
+## 技术点
+
+* **自身浮动法**
+
+看到这种类似的布局，第一反应就是使用float浮动来实现，将左右栏设置float，就可以形成类似布局，然后两边都设定固定宽度就可以了。html部分三个代码是可以换的，然后调整margin就行，这是其余两个方法所不具有的优势。还有要注意的是在最外面的父元素容器，要设置`overflow:hidden`来撑开父元素，达到高度自适应的效果，`overflow:auto`有IE出现滚动条的问题，暂且不表。下面我贴出html和css的关键部分。
+
+```html
+/*html部分*/
+<div class="content">
+  <div class="sub"></div>
+  <div class="extra"></div>
+  <div class="main"></div>
+</div>  
+```
+```css
+/*css部分*/
+.content{
+  overflow:hidden;
+}
+.sub{
+  float:left;
+}
+.extra{
+  float:right;
+}
+```
+
+极限情况：
+![float](http://7xrx2z.com1.z0.glb.clouddn.com/float.png)
+
+
+
+* **绝对定位法**
+
+第二种方法是绝对定位法，他是我们最容易直观了解的方法，直接仿佛贴图一般，绝对定位两边的内容，就可以达到三栏布局的效果，要注意父元素容器要设置`position:revlative`。这个任务其实是不能用这个方法的，因为这个父元素容器高度无法撑开，所以在父元素有样式的时候，这个方法是不行的，至于哪些元素可以撑开，哪些不可以，具体见[这里](http://www.cnblogs.com/lhb25/p/inside-block-formatting-ontext.html){:target="_blank"}
+
+```html
+/*html部分*/
+<div class="content"></div>
+  <div class="sub"></div>
+  <div class="main"></div>
+  <div class="extra"></div>
+</div>
+```
+```css
+/*css部分*/
+.content{
+  position:relative;
+}
+.sub,.extra{
+  position:absolute;
+}
+
+```
+
+极限情况：
+![position](http://7xrx2z.com1.z0.glb.clouddn.com/margin.png)
+
+* **margin负值法**
+
+这是我demo里的方法，是相对最复杂的一种，需要添加额外标签，但是对于搜索引擎比较友好，把主体结构放在最上面。具体实现看代码。这里还有个小插曲，我忘记设定`box-sizing: border-box;`造成了我右边栏，width设定的120px，加上边框122px，而我在归位的时候，设定的`margin-left: -120px;`右边栏挤不进去，后来经过调试才发现了，以后一定要注意。
+
+```html
+/*html部分*/
+<div class="content">
+  <div class="main">
+    <div class="body"></div>
+  </div>
+  <div class="sub"></div>
+  <div class="extra"></div>
+</div>
+```
+```css
+/*css部分*/
+.content{
+  overflow: hidden;
+}
+.main,.body,.sub,.extra{
+  float:left;
+}
+.sub{
+  margin-left: -100%;
+}
+.extra{
+  float: left;
+  width: 120px;
+  margin-left: -120px;
+}
+```
+极限情况：
+
+![margin](http://7xrx2z.com1.z0.glb.clouddn.com/position.png)
+
+## 感想
+这个例子是真切感到任务的重要说明里说的
+
+>课程多数题目的解决方案都不是唯一的，这和我们在实际工作中的情况也是一致的。因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。那些最终没有被我们采纳的方案，同样也可以帮助我们学到很多知识。
+
+三种不同的方法，让我在完成同一个效果时，思考了更多，看上去挺简单的三栏布局，其实内有乾坤。要走的路，还很长啊。

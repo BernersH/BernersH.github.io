@@ -10,9 +10,9 @@
     <meta name="keyword"  content="">
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 
-    <title>Glad to see you here - 黄新的博客 | Bern3rsH Blog</title>
+    <title>[IFE]百度IFE前端技术学院任务三笔记 - 黄新的博客 | Bern3rsH Blog</title>
 
-    <link rel="canonical" href="bernersh.github.io/2015/12/16/welcome/">
+    <link rel="canonical" href="bernersh.github.io/2016/03/29/ife3/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -131,13 +131,13 @@
 
     <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="/img/welcome-bg.jpeg" width="0" height="0"> -->
+<!-- <img src="/img/ife-bg.jpeg" width="0" height="0"> -->
 
 <!-- Post Header -->
 
 <style type="text/css">
     header.intro-header{
-        background-image: url('/img/welcome-bg.jpeg')
+        background-image: url('/img/ife-bg.jpeg')
     }
 </style>
 <header class="intro-header" >
@@ -147,17 +147,21 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#杂谈" title="杂谈">杂谈</a>
+                        <a class="tag" href="/tags/#IFE" title="IFE">IFE</a>
                         
                         <a class="tag" href="/tags/#FE" title="FE">FE</a>
                         
+                        <a class="tag" href="/tags/#HTML" title="HTML">HTML</a>
+                        
+                        <a class="tag" href="/tags/#CSS" title="CSS">CSS</a>
+                        
                     </div>
-                    <h1>Glad to see you here</h1>
+                    <h1>[IFE]百度IFE前端技术学院任务三笔记</h1>
                     
                     
-                    <h2 class="subheading">"I have been waiting for you here for a long time"</h2>
+                    <h2 class="subheading"> "三栏式布局 自身浮动，绝对定位，margin负值三种方式具体实现"</h2>
                     
-                    <span class="meta">Posted by Bern3rsH on December 16, 2015</span>
+                    <span class="meta">Posted by Bern3rsH on March 29, 2016</span>
                 </div>
             </div>
         </div>
@@ -176,94 +180,117 @@
                 post-container">
 
 				<blockquote>
-  <p>“前进！不择手段地前进！！”</p>
+  <p>一直对<a href="http://ife.baidu.com/" target="_blank">百度IFE前端技术学院</a>这件事很赞赏，觉得他们是做了一件很好的事。而做任务的过程中，真的发现了蛮多小的点，自己以前放过了，争取现在加油打牢基础。诶，白天课还挺多，只能晚上加油啦。我尽量把遇到的问题和解决方法都列出来吧，弱渣一枚，大家共勉。感谢百度吧，提供这样的一次机会，前两季班都开了个头就因为时间问题放弃了，希望这一次可以真正去提升自己。希望大家多去<a href="http://ife.baidu.com/group/profile?groupId=440" target="_blank">中南前端</a>，去review我们，谢谢啦。现在我将我在那里的学习笔记同步过来。</p>
 </blockquote>
 
+<p>任务三：三栏式布局</p>
+
+<p><a href="http://ife.baidu.com/task/detail?taskId=3" target="_blank">任务</a><br />
+<a href="https://github.com/BernersH/baidu-ife-2016-spring/tree/gh-pages/3" target="_blank">代码</a><br />
+<a href="http://bernersh.github.io/baidu-ife-2016-spring/3/index.html" target="_blank">demo</a></p>
+
 <h2 id="section">前言</h2>
-<p>终于有个自己的地方，网上的家？</p>
 
-<p><a href="#build">直接看博客技术的实现，gogogo</a></p>
-
-<p>一直憧憬着，能够有这么个地方，能够记录有时脑子坏了的自己那些云波诡谲的想法，还有作为一个把全栈工程师当作未来目标的自己对于技术的一点看法和感悟，听和看无数的大牛说过要搞自己的技术博客。而临到想写时，那些CSDN，博客园之类的，可能时和设计师交朋友交得多了，审美也挑剔了起来，觉得那些博客网站太丑了。恰好做的前端，于是一直想自己折腾一个“部落格”，但是一直都太懒了，还有觉得自己水平并不能做出自己满意的作品。</p>
-
-<p>直到想要去公司寒假实习的时候，猛然发现自己没有什么拿得出手的东西，仅仅只有github上那几个差劲的项目。慌张起来，于是花了几天，也算是了却一桩心愿，以后也有了自己的“自留地”。</p>
-
-<p id="build"></p>
-
-<hr />
-
-<h2 id="section-1">技术实现</h2>
-
-<p>暑假的时候也动过写博客的念头，因后来忙于外包，也就没时间做，放弃了。不过也google了许多相关的资料，以前就很喜欢看阮老师的博客，恰巧里面有一篇<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">《搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门》</a>觉得很对胃口，于是就决定使用<a href="http://jekyllrb.com/">Jekyll</a>+<a href="https://pages.github.com/">Github Pages</a>来搭建我的“小窝”。这是Jekyll的<a href="http://jekyllcn.com/">中文文档网站</a>,里面详细介绍了关于jekyll的一些指令和配置。</p>
-
-<p>这样做的好处，显而易见：</p>
+<p>看到这个三栏布局，以前就知道可以用自身浮动法和绝对定位法。早有耳闻有margin负值法，貌似淘宝就是采用的这个方法。在代码里我将三种方法都写了，下面我就略写一写三种方法的具体实现方法。<br />
+## 技术点</p>
 
 <ul>
-  <li>
-    <p><strong>Markdown</strong> 对于我来说，这是一个很好的契机去学习这门让我的写作变得优雅起来的语言，名号早已如雷贯耳，却一直没用过。<a href="http://wowubuntu.com/markdown/">Markdown语法说明</a>而Github Pages推荐使用的Markdown解释器是kramdown，与一般的Markdown语法又有所不同，但也不需要过分纠结。这是<a href="https://github.com/flyaway1217/flyaway1217.github.com/blob/master/_drafts/Kramdown-Syntax.md">kramdown的中文文档</a>(这是我从别人Github Pages博客的draft(草稿)里找到的，我也是蛮拼的)。</p>
-  </li>
-  <li>
-    <p>无需<strong>数据库</strong>、<strong>评论功能</strong>，不需要不断的更新版本——只用关心你的博客内容。</p>
-  </li>
-  <li>
-    <p>只需使用Github的发布功能，就<strong>Blog Post</strong>,加深了Github的使用（虽然我基本都是用的Mac的Github桌面版。。。）</p>
-  </li>
-  <li>
-    <p>有很多很多的模版供你选择，还可以自己随意更改</p>
-
-    <p>额，Jekyll＋Github Pages最大的问题。还是<strong>GFW</strong>(俗称的墙）的问题（手动再见）`</p>
-  </li>
-  <li>
-    <p>github服务器访问过慢,不过还好可以忍受</p>
-  </li>
-  <li>
-    <p>Jekyll的默认插件Disqus使用的都是国内无法使用的Facebook,Twitter等的帐号，而国内的评论插件多说，有言等的评论框真的太丑了。。。稍微逼格高点的模版就会有深深的违和感，所以暂时还没有做评论，以后考虑考虑再说,我试用了<a href="http://share.baidu.com/">百度分享</a>来做分享功能，十分方便，只要在post布局页面插入HTML和JS语句即可，会自动变成图标进行分享，唯一的不足可能是灰色主题的微信图标有bug（见<a href="#bug">文底</a>)和印象笔记图标不显示（手动再见）</p>
-  </li>
-  <li>
-    <p>Jekyll的安装在国内真心太慢了，我目前翻墙只是用<a href="https://github.com/XX-net/XX-Net">XX-Net</a>配合Chrome里的<a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?utm_source=chrome-ntp-icon">Proxy SwitchyOmega</a>插件，没有全局的VPN，所以按照Jekyll文档安装的时候速度奇慢，貌似是被墙了</p>
-  </li>
+  <li><strong>自身浮动法</strong></li>
 </ul>
 
-<p>下面就是我遇到几个<strong>问题</strong>:</p>
+<p>看到这种类似的布局，第一反应就是使用float浮动来实现，将左右栏设置float，就可以形成类似布局，然后两边都设定固定宽度就可以了。html部分三个代码是可以换的，然后调整margin就行，这是其余两个方法所不具有的优势。还有要注意的是在最外面的父元素容器，要设置<code>overflow:hidden</code>来撑开父元素，达到高度自适应的效果，<code>overflow:auto</code>有IE出现滚动条的问题，暂且不表。下面我贴出html和css的关键部分。</p>
+
+<pre><code class="language-html">/*html部分*/
+&lt;div class="content"&gt;
+  &lt;div class="sub"&gt;&lt;/div&gt;
+  &lt;div class="extra"&gt;&lt;/div&gt;
+  &lt;div class="main"&gt;&lt;/div&gt;
+&lt;/div&gt;  
+</code></pre>
+<pre><code class="language-css">/*css部分*/
+.content{
+  overflow:hidden;
+}
+.sub{
+  float:left;
+}
+.extra{
+  float:right;
+}
+</code></pre>
+
+<p>极限情况：<br />
+<img src="http://7xrx2z.com1.z0.glb.clouddn.com/float.png" alt="float" /></p>
 
 <ul>
-  <li>
-    <p>安装Jekyll。<a href="http://jekyll.bootcss.com/docs/installation/">Jekyll的安装文档</a>里面说的是用<code>gem install jekyll</code>来安装，然后Mac自带了Ruby和gem。但是，现实是残酷的，怎么也不成功。后来在<a href="http://www.cnblogs.com/kaiye/archive/2013/04/24/3039345.html">Mac下搭建jekyll环境</a>里才发现自带的版本是过低的，无法安装Jekyll，而且后来需要替换成淘宝的镜像才能正常速度安装Jekyll。具体操作他的博文里都有</p>
-  </li>
-  <li>
-    <p>用的别人的模版配置问题。我的博客大的主题是fork的<a href="https://github.com/Huxpro/huxblog-boilerplate">Hux同学（学习的榜样）Blog的Boilerplate</a>，但是在配置的时候要注意_config.yml里的url和baseurl。<strong>你是用户和组织的站点（username.github.io)下master的分支还是username.github.io下的新建项目的分支</strong>。 如果是前者，那么直接将Jekyll的文件夹commit到master分支上;如果是后者，先在username.github.io下添加gh-pages分支，然后在_config.yml里在baseurl添加/project-name（注意必须存在头部的斜杠以及不能有尾部的斜杠。）还有就是Jekyll的本地文件夹里的CNAME记得修改为自己博客的网址，不然Github在build你的页面的时候会失败，发邮件给你（亲测，哈哈)。</p>
-  </li>
-  <li>
-    <p>文件编码问题。貌似因为Jekyll的编码问题，所以博文的标题是不能用中文的，而且整个博文的编码也必须是UTF-8，windows平台记得不能带BOM字符。我就因为不小心用sublime打开了博文，改变了编码导致全部乱码，而且Github Pages也是无法识别非UTF-8编码的文章，因为这个又收到亲爱的Github的邮。（它一定是爱上我了，嗯，准是这样）</p>
-  </li>
-  <li>
-    <p>配置文件问题。要搞懂_config.yml里面各个变量的<strong>实际意义</strong>。eg.featured-condition-size这个变量默认配置为1，也就是说起码要有两篇文章是某一个标签，这个标签才会显示在FEATURED TAGS处，我自己就因为这个原因浪费了好多时间。</p>
-  </li>
+  <li><strong>绝对定位法</strong></li>
 </ul>
 
-<p>后续添加问题：</p>
+<p>第二种方法是绝对定位法，他是我们最容易直观了解的方法，直接仿佛贴图一般，绝对定位两边的内容，就可以达到三栏布局的效果，要注意父元素容器要设置<code>position:revlative</code>。这个任务其实是不能用这个方法的，因为这个父元素容器高度无法撑开，所以在父元素有样式的时候，这个方法是不行的，至于哪些元素可以撑开，哪些不可以，具体见<a href="http://www.cnblogs.com/lhb25/p/inside-block-formatting-ontext.html" target="_blank">这里</a></p>
+
+<pre><code class="language-html">/*html部分*/
+&lt;div class="content"&gt;&lt;/div&gt;
+  &lt;div class="sub"&gt;&lt;/div&gt;
+  &lt;div class="main"&gt;&lt;/div&gt;
+  &lt;div class="extra"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">/*css部分*/
+.content{
+  position:relative;
+}
+.sub,.extra{
+  position:absolute;
+}
+
+</code></pre>
+
+<p>极限情况：<br />
+<img src="http://7xrx2z.com1.z0.glb.clouddn.com/margin.png" alt="position" /></p>
 
 <ul>
-  <li>要在yml配置文件里添加 <code>future:true</code>,否则不能发布超过当天的博文（貌似还有时差，美国时间为准）</li>
+  <li><strong>margin负值法</strong></li>
 </ul>
 
-<p>当你把Jekyll安装完，本地修改调试完，就可以将文件夹commit到你的username.github.io仓库的master下啦。大概过10分钟，你就可以在<strong>username.github.io</strong>（默认）这个网址下中二地看着自己的博客(孩)页面(子)了。</p>
+<p>这是我demo里的方法，是相对最复杂的一种，需要添加额外标签，但是对于搜索引擎比较友好，把主体结构放在最上面。具体实现看代码。这里还有个小插曲，我忘记设定<code>box-sizing: border-box;</code>造成了我右边栏，width设定的120px，加上边框122px，而我在归位的时候，设定的<code>margin-left: -120px;</code>右边栏挤不进去，后来经过调试才发现了，以后一定要注意。</p>
 
-<p>Good luck!</p>
+<pre><code class="language-html">/*html部分*/
+&lt;div class="content"&gt;
+  &lt;div class="main"&gt;
+    &lt;div class="body"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="sub"&gt;&lt;/div&gt;
+  &lt;div class="extra"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">/*css部分*/
+.content{
+  overflow: hidden;
+}
+.main,.body,.sub,.extra{
+  float:left;
+}
+.sub{
+  margin-left: -100%;
+}
+.extra{
+  float: left;
+  width: 120px;
+  margin-left: -120px;
+}
+</code></pre>
+<p>极限情况：</p>
 
-<hr />
+<p><img src="http://7xrx2z.com1.z0.glb.clouddn.com/position.png" alt="margin" /></p>
 
-<h2 id="section-2">后记</h2>
+<h2 id="section-1">感想</h2>
+<p>这个例子是真切感到任务的重要说明里说的</p>
 
-<p>这是我第一次写markdown的文档（囧），一边看一边要查询语法，也是第一次写这种教授类的文章，觉得更加佩服那些写了很多博文的技术大牛。写的时候你需要不断回忆当时所遇到的问题，还要去找一下当时解决所用的网址和方法。但是在搭建这个博客的过程中，也学习了很多，更熟练的用Boostrap，用Jekyll的layout可以快速定制每个页面的排版等。</p>
+<blockquote>
+  <p>课程多数题目的解决方案都不是唯一的，这和我们在实际工作中的情况也是一致的。因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。那些最终没有被我们采纳的方案，同样也可以帮助我们学到很多知识。</p>
+</blockquote>
 
-<p>正是这样，一篇小小的开博文，几乎耗去了我一个下午的时间。。。于是以后一定要养成遇到问题随手把问题和解决方法记录在Evernote上，然后觉得有价值的来这里与大家分享。希望自己能够坚持把，虽然现在关于前端的博客一大把。。。但是，我会竭尽我自己一点小小的能力写出一点东西(比如这个博客本身的代码实现我有些地方还不太明白，研究之后再写一点东西）。这如最前面所说的<a href="http://book.douban.com/subject/2567698/">《三体》</a>里的名言”前进!不择手段的前进!!”，也不枉现在度过的这些美好的青春时光。</p>
-
-<p>以上。</p>
-
-<p id="bug"></p>
-<p>－－Bern3rsH写于2015.12.16</p>
-
+<p>三种不同的方法，让我在完成同一个效果时，思考了更多，看上去挺简单的三栏布局，其实内有乾坤。要走的路，还很长啊。</p>
 
 
                 <hr>
@@ -290,9 +317,13 @@
 
                 <ul class="pager">
                     
+                    <li class="previous">
+                        <a href="/2016/03/29/ife2/" data-toggle="tooltip" data-placement="top" title="[IFE]百度IFE前端技术学院任务二笔记">&larr; Previous Post</a>
+                    </li>
+                    
                     
                     <li class="next">
-                        <a href="/2015/12/22/photo/" data-toggle="tooltip" data-placement="top" title="[前端]浅尝app拍照翻转问题">Next Post &rarr;</a>
+                        <a href="/2016/03/29/ife4-13-14-15-16/" data-toggle="tooltip" data-placement="top" title="[IFE]百度IFE前端技术学院任务四十三十四十五十六笔记">Next Post &rarr;</a>
                     </li>
                     
                 </ul>

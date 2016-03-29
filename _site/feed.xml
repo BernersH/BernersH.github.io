@@ -5,12 +5,467 @@
     <description></description>
     <link>bernersh.github.io/</link>
     <atom:link href="bernersh.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 19 Jan 2016 00:25:59 +0800</pubDate>
-    <lastBuildDate>Tue, 19 Jan 2016 00:25:59 +0800</lastBuildDate>
+    <pubDate>Tue, 29 Mar 2016 10:05:01 +0800</pubDate>
+    <lastBuildDate>Tue, 29 Mar 2016 10:05:01 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title>浅尝web app拍照翻转问题</title>
+        <title>[IFE]百度IFE前端技术学院任务四十三十四十五十六笔记</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;一直对&lt;a href=&quot;http://ife.baidu.com/&quot; target=&quot;_blank&quot;&gt;百度IFE前端技术学院&lt;/a&gt;这件事很赞赏，觉得他们是做了一件很好的事。而做任务的过程中，真的发现了蛮多小的点，自己以前放过了，争取现在加油打牢基础。诶，白天课还挺多，只能晚上加油啦。我尽量把遇到的问题和解决方法都列出来吧，弱渣一枚，大家共勉。感谢百度吧，提供这样的一次机会，前两季班都开了个头就因为时间问题放弃了，希望这一次可以真正去提升自己。希望大家多去&lt;a href=&quot;http://ife.baidu.com/group/profile?groupId=440&quot; target=&quot;_blank&quot;&gt;中南前端&lt;/a&gt;，去review我们，谢谢啦。现在我将我在那里的学习笔记同步过来。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;任务四:定位和居中问题&lt;br /&gt;
+&lt;a href=&quot;http://ife.baidu.com/task/detail?taskId=4&quot; target=&quot;_blank&quot;&gt;任务&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/BernersH/baidu-ife-2016-spring/tree/master/4&quot; target=&quot;_blank&quot;&gt;代码&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://bernersh.github.io/baidu-ife-2016-spring/4/index.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;任务十三:零基础JavaScript编码（一）&lt;br /&gt;
+&lt;a href=&quot;http://ife.baidu.com/task/detail?taskId=13&quot; target=&quot;_blank&quot;&gt;任务&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/BernersH/baidu-ife-2016-spring/blob/master/13/index.html&quot; target=&quot;_blank&quot;&gt;代码&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://bernersh.github.io/baidu-ife-2016-spring/13/index.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;任务十四:零基础JavaScript编码（二）&lt;br /&gt;
+&lt;a href=&quot;http://ife.baidu.com/task/detail?taskId=14&quot;&gt;任务&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/BernersH/baidu-ife-2016-spring/blob/master/14/index.html&quot; target=&quot;_blank&quot;&gt;代码&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://bernersh.github.io/baidu-ife-2016-spring/14/index.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;任务十五:零基础JavaScript编码（三）&lt;br /&gt;
+&lt;a href=&quot;http://ife.baidu.com/task/detail?taskId=15&quot; target=&quot;_blank&quot;&gt;任务&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/BernersH/baidu-ife-2016-spring/blob/master/15/index.html&quot; target=&quot;_blank&quot;&gt;代码&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://bernersh.github.io/baidu-ife-2016-spring/15/index.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;任务十六:零基础JavaScript编码（四）&lt;br /&gt;
+&lt;a href=&quot;http://ife.baidu.com/task/detail?taskId=16&quot; target=&quot;_blank&quot;&gt;任务&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/BernersH/baidu-ife-2016-spring/tree/master/16&quot; target=&quot;_blank&quot;&gt;代码&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://bernersh.github.io/baidu-ife-2016-spring/16/task.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;技术点&lt;/h2&gt;
+
+&lt;p&gt;最近又在忙找实习，所以有一段时间没有写笔记了。现在找了个早上的空隙，来写一写这五个任务中遇到一些我觉得有点用处的点。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;任务四&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;关于垂直居中的问题，网上有很多教程了，我推荐&lt;a href=&quot;http://www.zhangxinxu.com/wordpress/2013/11/margin-auto-absolute-%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D-%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/&quot;&gt;这篇&lt;/a&gt;和&lt;a href=&quot;http://www.zhangxinxu.com/wordpress/2009/08/%E5%A4%A7%E5%B0%8F%E4%B8%8D%E5%9B%BA%E5%AE%9A%E7%9A%84%E5%9B%BE%E7%89%87%E3%80%81%E5%A4%9A%E8%A1%8C%E6%96%87%E5%AD%97%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/&quot; target=&quot;_blank&quot;&gt;这篇&lt;/a&gt;，其中前者就是我在上一个笔记里提到过的，页面设置&lt;code&gt;position:absolute&lt;/code&gt;，&lt;code&gt;margin:auto&lt;/code&gt;即可垂直水平居中，这些都是不知道子元素长宽的时候居中的方法。这次的任务，由于以前了解Flex布局但是没有用过，所以就尝试用Flex来做，果然非凡。关键语句很简单，外面的wrap设置&lt;code&gt;height: 100%&lt;/code&gt;&lt;code&gt;display: flex&lt;/code&gt;&lt;code&gt;justify-content: center&lt;/code&gt;&lt;code&gt;align-items: center&lt;/code&gt;,但是这里有个要注意的地方，让我困惑了挺久，这样设置后，必须要设置&lt;code&gt;body,html{height:100%;}&lt;/code&gt;这里缺一个都不行，以前我认为会默认100%是不正确的，目前还不知道什么原因，flex还是不是很熟练，囧，希望有知道的人联系我，上面有联系方式。这里我没有做对于以前浏览器的css hack，先不考虑了。毕竟，IE is bullshit。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;任务十三&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;由于感觉自己js比较弱，所以做完任务四后直接做js部分了，任务十三没有什么要说的，但是要注意innerText的问题，这个属性还是最好不要用，火狐不支持，纯文本替换，用textContent。这里我以前还不知道，别人review给我提出来的，(review大法好，但是我一般只是看完，学习了，一般不打分，要改要改，感觉这样是盗窃知识。。。)，具体可以看&lt;a href=&quot;http://openwares.net/js/innertext_textcontent_innerhtml.html&quot; target=&quot;_blank&quot;&gt;这篇&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;任务十四&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;主要是一个排序的问题，sort是用ASCII字符来排序的，具体见&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort&quot; target=&quot;_blank&quot;&gt;MDN&lt;/a&gt;（话说越来越喜欢MDN了，内容比较权威，排版舒服，看英文的比较会了解精髓），因为这个任务是比较数字，我在review他人代码的时候，发现可以直接&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; //数组数字排序
+ arr.sort(function(pre,next){
+     return next[1] - pre[1];
+   })
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;因为数字，用减号不会进行隐式转换，但是别的数据类型我还没测试过。不用再想我在《javascript高级程序设计》中看的那样return 1，return -1啥的了。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;任务十五&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;没什么具体要说的，可能就是一个数组的split方法，里面放正则表达式，比较简洁明了，w3c关于&lt;a href=&quot;http://www.w3school.com.cn/jsref/jsref_split.asp&quot; target=&quot;_blank&quot;&gt;这个&lt;/a&gt;的一些例子，便于区分城市部分和空气质量部分。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;任务十六&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;1.关于中文字符的正则表达式为[\u4e00-\u9fa5]&lt;/p&gt;
+
+&lt;p&gt;2.for in的用法。可以用for (var 变量 in 对象)来简化遍历的过程，w3c的&lt;a href=&quot;http://www.w3school.com.cn/js/js_loop_for_in.asp&quot; target=&quot;_blank&quot;&gt;介绍&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;3.活学活用三元运算符。在渲染空气质量列表的时候，在没有的时候不需要表头，则可以判断是否有city来灵活来生成下面的列表。&lt;/p&gt;
+
+&lt;p&gt;4.在有多个按钮的时候，可以在父元素用事件代理，十分方便，下面加上判断就可以获取点击按钮的节点。关于&lt;a href=&quot;http://www.ido321.com/1570.html&quot; target=&quot;_blank&quot;&gt;事件代理&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;5.dataset属性。这个也是我在review别人代码的时候学习到的，后来在张鑫旭的博客看了&lt;a href=&quot;http://www.zhangxinxu.com/wordpress/2011/06/html5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E5%AF%B9%E8%B1%A1dataset%E7%AE%80%E4%BB%8B/&quot; target=&quot;_blank&quot;&gt;比较详细的一篇&lt;/a&gt;,里面说的兼容性问题现在基本已经不存在了。在我们的代码中，需要获取每个删除按钮前面的city值，则我们在渲染的时候，默认在每个li节点添加data-city属性，存放前面的city，后面给删除按钮添加删除事件的时候，&lt;code&gt;delBtnHandle(event.target.dataset.city)&lt;/code&gt;即可，里面的dataset.city即可获取data-city的值，十分方便。dataset还有很多妙用，等你发现。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 29 Mar 2016 18:20:00 +0800</pubDate>
+        <link>bernersh.github.io/2016/03/29/ife4-13-14-15-16/</link>
+        <guid isPermaLink="true">bernersh.github.io/2016/03/29/ife4-13-14-15-16/</guid>
+        
+        <category>IFE</category>
+        
+        <category>FE</category>
+        
+        <category>HTML</category>
+        
+        <category>CSS</category>
+        
+        <category>JS</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>[IFE]百度IFE前端技术学院任务三笔记</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;一直对&lt;a href=&quot;http://ife.baidu.com/&quot; target=&quot;_blank&quot;&gt;百度IFE前端技术学院&lt;/a&gt;这件事很赞赏，觉得他们是做了一件很好的事。而做任务的过程中，真的发现了蛮多小的点，自己以前放过了，争取现在加油打牢基础。诶，白天课还挺多，只能晚上加油啦。我尽量把遇到的问题和解决方法都列出来吧，弱渣一枚，大家共勉。感谢百度吧，提供这样的一次机会，前两季班都开了个头就因为时间问题放弃了，希望这一次可以真正去提升自己。希望大家多去&lt;a href=&quot;http://ife.baidu.com/group/profile?groupId=440&quot; target=&quot;_blank&quot;&gt;中南前端&lt;/a&gt;，去review我们，谢谢啦。现在我将我在那里的学习笔记同步过来。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;任务三：三栏式布局&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ife.baidu.com/task/detail?taskId=3&quot; target=&quot;_blank&quot;&gt;任务&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/BernersH/baidu-ife-2016-spring/tree/gh-pages/3&quot; target=&quot;_blank&quot;&gt;代码&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://bernersh.github.io/baidu-ife-2016-spring/3/index.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;看到这个三栏布局，以前就知道可以用自身浮动法和绝对定位法。早有耳闻有margin负值法，貌似淘宝就是采用的这个方法。在代码里我将三种方法都写了，下面我就略写一写三种方法的具体实现方法。&lt;br /&gt;
+## 技术点&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;自身浮动法&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;看到这种类似的布局，第一反应就是使用float浮动来实现，将左右栏设置float，就可以形成类似布局，然后两边都设定固定宽度就可以了。html部分三个代码是可以换的，然后调整margin就行，这是其余两个方法所不具有的优势。还有要注意的是在最外面的父元素容器，要设置&lt;code&gt;overflow:hidden&lt;/code&gt;来撑开父元素，达到高度自适应的效果，&lt;code&gt;overflow:auto&lt;/code&gt;有IE出现滚动条的问题，暂且不表。下面我贴出html和css的关键部分。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;/*html部分*/
+&amp;lt;div class=&quot;content&quot;&amp;gt;
+  &amp;lt;div class=&quot;sub&quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&quot;extra&quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&quot;main&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;/*css部分*/
+.content{
+  overflow:hidden;
+}
+.sub{
+  float:left;
+}
+.extra{
+  float:right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;极限情况：&lt;br /&gt;
+&lt;img src=&quot;http://7xrx2z.com1.z0.glb.clouddn.com/float.png&quot; alt=&quot;float&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;绝对定位法&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;第二种方法是绝对定位法，他是我们最容易直观了解的方法，直接仿佛贴图一般，绝对定位两边的内容，就可以达到三栏布局的效果，要注意父元素容器要设置&lt;code&gt;position:revlative&lt;/code&gt;。这个任务其实是不能用这个方法的，因为这个父元素容器高度无法撑开，所以在父元素有样式的时候，这个方法是不行的，至于哪些元素可以撑开，哪些不可以，具体见&lt;a href=&quot;http://www.cnblogs.com/lhb25/p/inside-block-formatting-ontext.html&quot; target=&quot;_blank&quot;&gt;这里&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;/*html部分*/
+&amp;lt;div class=&quot;content&quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&quot;sub&quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&quot;main&quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&quot;extra&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;/*css部分*/
+.content{
+  position:relative;
+}
+.sub,.extra{
+  position:absolute;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;极限情况：&lt;br /&gt;
+&lt;img src=&quot;http://7xrx2z.com1.z0.glb.clouddn.com/margin.png&quot; alt=&quot;position&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;margin负值法&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这是我demo里的方法，是相对最复杂的一种，需要添加额外标签，但是对于搜索引擎比较友好，把主体结构放在最上面。具体实现看代码。这里还有个小插曲，我忘记设定&lt;code&gt;box-sizing: border-box;&lt;/code&gt;造成了我右边栏，width设定的120px，加上边框122px，而我在归位的时候，设定的&lt;code&gt;margin-left: -120px;&lt;/code&gt;右边栏挤不进去，后来经过调试才发现了，以后一定要注意。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;/*html部分*/
+&amp;lt;div class=&quot;content&quot;&amp;gt;
+  &amp;lt;div class=&quot;main&quot;&amp;gt;
+    &amp;lt;div class=&quot;body&quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div class=&quot;sub&quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&quot;extra&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;/*css部分*/
+.content{
+  overflow: hidden;
+}
+.main,.body,.sub,.extra{
+  float:left;
+}
+.sub{
+  margin-left: -100%;
+}
+.extra{
+  float: left;
+  width: 120px;
+  margin-left: -120px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;极限情况：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7xrx2z.com1.z0.glb.clouddn.com/position.png&quot; alt=&quot;margin&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;感想&lt;/h2&gt;
+&lt;p&gt;这个例子是真切感到任务的重要说明里说的&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;课程多数题目的解决方案都不是唯一的，这和我们在实际工作中的情况也是一致的。因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。那些最终没有被我们采纳的方案，同样也可以帮助我们学到很多知识。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;三种不同的方法，让我在完成同一个效果时，思考了更多，看上去挺简单的三栏布局，其实内有乾坤。要走的路，还很长啊。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 29 Mar 2016 18:20:00 +0800</pubDate>
+        <link>bernersh.github.io/2016/03/29/ife3/</link>
+        <guid isPermaLink="true">bernersh.github.io/2016/03/29/ife3/</guid>
+        
+        <category>IFE</category>
+        
+        <category>FE</category>
+        
+        <category>HTML</category>
+        
+        <category>CSS</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>[IFE]百度IFE前端技术学院任务二笔记</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;一直对&lt;a href=&quot;http://ife.baidu.com/&quot; target=&quot;_blank&quot;&gt;百度IFE前端技术学院&lt;/a&gt;这件事很赞赏，觉得他们是做了一件很好的事。而做任务的过程中，真的发现了蛮多小的点，自己以前放过了，争取现在加油打牢基础。诶，白天课还挺多，只能晚上加油啦。我尽量把遇到的问题和解决方法都列出来吧，弱渣一枚，大家共勉。感谢百度吧，提供这样的一次机会，前两季班都开了个头就因为时间问题放弃了，希望这一次可以真正去提升自己。希望大家多去&lt;a href=&quot;http://ife.baidu.com/group/profile?groupId=440&quot; target=&quot;_blank&quot;&gt;中南前端&lt;/a&gt;，去review我们，谢谢啦。现在我将我在那里的学习笔记同步过来。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;任务二：零基础HTML及CSS编码（一）&lt;br /&gt;
+&lt;a href=&quot;http://ife.baidu.com/task/detail?taskId=2&quot; target=&quot;_blank&quot;&gt;任务&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/BernersH/baidu-ife-2016-spring/tree/master/2&quot; target=&quot;_blank&quot;&gt;代码&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://bernersh.github.io/baidu-ife-2016-spring/2/index.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;技术点&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;少见的CSS属性&lt;/strong&gt;可能也不叫少见吧，我自己以前用的少的一些属性。&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;box-shadow&lt;/code&gt; 用来显示页面边缘阴影，&lt;a href=&quot;http://www.w3school.com.cn/cssref/pr_box-shadow.asp&quot; target=&quot;_blank&quot;&gt;W3CSchool&lt;/a&gt;上有挺好的介绍&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;text-indent&lt;/code&gt; 用来进行段落缩进，同样是&lt;a href=&quot;http://www.w3school.com.cn/cssref/pr_text_text-indent.asp&quot; target=&quot;_blank&quot;&gt;W3CSchool&lt;/a&gt;可以在需要缩进的段落&lt;code&gt;p&lt;/code&gt;标签中添加text-indent类，然后在CSS里添加相关样式，比较灵活&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;子类选择器和CSS书写习惯&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以前写CSS的习惯不太好吧，总是不断加类加类，代码会变得冗长，这一次特地注意了灵活运用各种选择器还有书写不同选择器下相同样式，尽量写在一起，这样方便后期一次性修改迭代。这一次用了蛮多次子类选择器&lt;code&gt;:firstchild&lt;/code&gt;,&lt;code&gt;:lastchild&lt;/code&gt;等等，感觉还是挺好用的，因为我用的表格样式来设定表单，所以用&lt;code&gt;.form-table tr td:first-child&lt;/code&gt;来一次性选择表单所有的标签部分，挺方便的。还有个注意点，就是子类选择器必须在一个相邻父元素下面才可以选择，而且&lt;code&gt;:firstchild&lt;/code&gt;,&lt;code&gt;:lastchild&lt;/code&gt;前面的内容就是你要选择的那一类的，&lt;code&gt;li&lt;/code&gt;啊，&lt;code&gt;td&lt;/code&gt;啊等等，而不是他们的父元素。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;图片和导航垂直居中&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在看设计稿的时候，上面的百度logo是垂直居中的，很容易想到用&lt;code&gt;vertical-align&lt;/code&gt;属性，但是图片不是类似inline-block这种软布局，&lt;code&gt;vertical-align&lt;/code&gt;属性是起不了作用的，所以我们在img外面套一个&lt;code&gt;span&lt;/code&gt;标签，然后设置&lt;code&gt;header&lt;/code&gt;部分&lt;code&gt;display:table&lt;/code&gt;,&lt;code&gt;span&lt;/code&gt;部分 &lt;code&gt;display:table-cell&lt;/code&gt;，再设置&lt;code&gt;vertical-align:middle&lt;/code&gt;就行了。然后我在查相关问题的时候，发现一个可以很好垂直对齐多个图片的方法，&lt;a href=&quot;http://www.zhangxinxu.com/wordpress/2009/08/%E5%A4%A7%E5%B0%8F%E4%B8%8D%E5%9B%BA%E5%AE%9A%E7%9A%84%E5%9B%BE%E7%89%87%E3%80%81%E5%A4%9A%E8%A1%8C%E6%96%87%E5%AD%97%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/#zhangxinxu_1&quot; target=&quot;_blank&quot;&gt;张鑫旭的博客&lt;/a&gt;，推荐他的博客，我有许多CSS相关的都是从他的博客看到，讲的都很细，而且全面，各种情况都会考虑。里面的思想还可以用在后面的导航文字垂直居中中，设置&lt;code&gt;a&lt;/code&gt;标签&lt;code&gt;display:inline-block&lt;/code&gt;，就可以愉快得使用各种居中属性啦。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;浏览器默认样式&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;许多人喜欢直接在页面前加&lt;code&gt;margin:0&lt;/code&gt;,&lt;code&gt;padding:0&lt;/code&gt;来解决浏览器的默认样式问题，其实以前我也没有太多考虑这个方面的问题，但是因为我导航栏是一个ul列表里，然后死活对不齐，所以我在查浏览器的属性的时候，一个&lt;code&gt;ul&lt;/code&gt;的默认&lt;code&gt;margin&lt;/code&gt;映入眼帘，好吧，没办法了，这个属性设置为0吧，但这样也不是办法啊，所以搜了个来自淘宝的初始化浏览器样式的代码段。我现在都用的这个&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;/*样式初始化 from taobao */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+  margin: 0;
+  padding: 0;
+}
+body, button, input, select, textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+code, kbd, pre, samp {
+  font-family: couriernew, courier, monospace;
+}
+small {
+  font-size: 12px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset, img {
+  border: 0;
+}
+button, input, select, textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;你以为这样就好了？too naive.在下面的图片流里，图片总是冒到li的边框外面去，又查才发现是figure的默认属性 &lt;code&gt;-webkit-margin-start: 40px;&lt;/code&gt;&lt;br /&gt;
+  &lt;code&gt;-webkit-margin-end: 40px;&lt;/code&gt;这哥俩在搞鬼，没办法设置为0了，才正常了。这一通折腾，真切让我觉得，浏览器的标准化，何其任重。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;感想&lt;/h2&gt;
+&lt;p&gt;以前觉得自己CSS还不错，但是经过这个简单页面的过了一遍，觉得还有很多很多要学啊，汗颜。很多浏览器兼容问题，还有一些奇技淫巧，值得我们不断去深挖。加油吧！&lt;/p&gt;
+</description>
+        <pubDate>Tue, 29 Mar 2016 17:20:00 +0800</pubDate>
+        <link>bernersh.github.io/2016/03/29/ife2/</link>
+        <guid isPermaLink="true">bernersh.github.io/2016/03/29/ife2/</guid>
+        
+        <category>IFE</category>
+        
+        <category>FE</category>
+        
+        <category>HTML</category>
+        
+        <category>CSS</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>[IFE]百度IFE前端技术学院任务一笔记</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;一直对&lt;a href=&quot;http://ife.baidu.com/&quot; target=&quot;_blank&quot;&gt;百度IFE前端技术学院&lt;/a&gt;这件事很赞赏，觉得他们是做了一件很好的事。而做任务的过程中，真的发现了蛮多小的点，自己以前放过了，争取现在加油打牢基础。诶，白天课还挺多，只能晚上加油啦。我尽量把遇到的问题和解决方法都列出来吧，弱渣一枚，大家共勉。感谢百度吧，提供这样的一次机会，前两季班都开了个头就因为时间问题放弃了，希望这一次可以真正去提升自己。希望大家多去&lt;a href=&quot;http://ife.baidu.com/group/profile?groupId=440&quot; target=&quot;_blank&quot;&gt;中南前端&lt;/a&gt;，去review我们，谢谢啦。现在我将我在那里的学习笔记同步过来。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;任务一：零基础HTML编码&lt;br /&gt;
+&lt;a href=&quot;http://ife.baidu.com/task/detail?taskId=1&quot; target=&quot;_blank&quot;&gt;任务&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/BernersH/baidu-ife-2016-spring/tree/master/1&quot; target=&quot;_blank&quot;&gt;代码&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://bernersh.github.io/baidu-ife-2016-spring/1/index.html&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;这两天，做这个最大的感悟就是，review的重要性，自己以前很少会去review别人的代码。总是看着设计稿或者某个功能，直接上手敲，遇到不会的就Google，但是这两天的经历让我觉得真的受益匪浅。看着别人的代码，看出别人的不同，或是看到更好的技术实现。或许这就是我们和搬砖的不同（大雾），这样的借鉴学习过程，让我们不是在做一个熟练工种，诚然，写前端需要写大量的页面熟手，而修炼内功，以前只知道看书，现在感觉review别人的代码也可以了。对了，看看这个设计稿，想想去年刚入门的自己，差不多要一个星期才可以写第一个的这个页面，也许那个时候有这个前端技术学院，可以提升飞快。闲话不说了，写一写自己遇到的一些不会或者不了解很深的点吧。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;技术点&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;HTML5新增元素&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;用到的主要是一些HTML5中新增的主体结构元素，&amp;lt;header&amp;gt;,&amp;lt;nav&amp;gt;,&amp;lt;article&amp;gt;,&amp;lt;hgroup&amp;gt;,&amp;lt;time&amp;gt;,&amp;lt;section&amp;gt;,&amp;lt;figure&amp;gt;,&amp;lt;aside&amp;gt;,&amp;lt;footer&amp;gt;等等。HTML5的时代，终于不用div，div，div到底了。这里有两张来自《HTML5与CSS3权威指南》的图，可以很明朗的显示出区别。&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;http://7xrx2z.com1.z0.glb.clouddn.com/h4.png&quot; alt=&quot;h4&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;http://7xrx2z.com1.z0.glb.clouddn.com/h5.png&quot; alt=&quot;h5&quot; /&gt;&lt;br /&gt;
+从这两个图中可以很清晰得看出，HTML5页面的不同，结构明晰，对应的内容有对应的标签，这样我们可以预见，在添加样式的时候，省去了许多添加类的工作，而且对于搜索引擎更加友好。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;article和section元素&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这两个标签其实从某种意义上来说，是从属元素。section元素是在article标签中的具有小标题的内容，一个article元素可以含有多个section元素。article元素，一般是独立的，完整的，可以独自被外部引用的内容。而section就是属于一块块的内容，作用就是分块，而且一般是由标题的，其中的内容可以单独存储在数据库或输出到word文档中。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;figure元素&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;figure元素是一种元素的组合，标题可选，内容一般是图片，统计图和代码示例，个人理解就是多媒体化的section元素。figcaption元素是figure元素的标题，一个figure元素里面最多有一个figcaption元素。&lt;a href=&quot;http://www.w3school.com.cn/tags/tag_figure.asp&quot; target=&quot;_blank&quot;&gt;W3CSchool&lt;/a&gt;上有相关的例子和说明。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;input的pattern属性&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这个属性我一开始是不知道的，一开始并没有做相关密码的正则匹配验证，后来在review一位同学的代码时，看到了这个属性，去查了下，可以用来做正则匹配。同样&lt;a href=&quot;http://www.w3school.com.cn/html5/att_input_pattern.asp&quot; target=&quot;_blank&quot;&gt;W3CSchool&lt;/a&gt;上有相关的内容。正则表达式我一直认为是一个很神奇的东西，哈哈。希望大家用好这个强大的工具。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;感想&lt;/h2&gt;
+&lt;p&gt;这第一个任务做下来，感觉虽然不是很难，但是有些过去没注意的代码规范的问题，凸显出来，需要多注意，多review他人的代码。一些HTML5新的元素什么的，有时间要多看，加强代码的可读性，看看自己以前的一些项目代码，产生了重构他们的想法（估计近似于重写了）。诶，说好的语义化，一赶就都顾不上了，这一点要改。这次让我重新回忆起以前的MarkDown语法内容和Git操作，也是另外的收获吧。这第一篇废话有点多，以后尽量多写问题相关的，啦啦啦。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 29 Mar 2016 16:20:00 +0800</pubDate>
+        <link>bernersh.github.io/2016/03/29/ife1/</link>
+        <guid isPermaLink="true">bernersh.github.io/2016/03/29/ife1/</guid>
+        
+        <category>IFE</category>
+        
+        <category>FE</category>
+        
+        <category>HTML</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>[杂谈]毕竟，人也不是生来就是世界的霸主</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;生存，是第一要务&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;最近在找实习的间隙，玩一款《球球大作战》的手机游戏来放松放松。游戏比较轻度，每局固定的15分钟，主要规则就是大球吃小球，小球就是不断吃随机出现的点状食物变大，然后再去吃别的比它小的球。当然，还有一些别的规则和方法，下面再说。本觉玩法如此简单的游戏，应该会很快就失去对它的兴趣，但是在这几天玩它的过程中，我却发现了许多不一样的乐趣，和一丝人文的思考在里面。高中时就比较喜欢写些东西，那些想的东西渐渐多了起来，久未写写自己想说的话了，总是在各种代码中遨游，仿佛已经忘记了自己的那一份小小的思考，而且最近面试时被问到最喜欢哪个游戏，为什么。那么，我就在前面多媒体老师的横飞唾沫中，写写这些思索，让他们与你相见，也作为我博客第一篇和程序无关的文章，也希望以后能多写写这方面的知识，让自己能够让灵魂自由地飞一会，从0和1的世界中出来透透气。&lt;/p&gt;
+
+&lt;p&gt;很奇怪，其实我要写的这些，在许多游戏中都有涉及，基本是构成许多游戏的基本法则，但是我却没有在玩那些游戏的时候有这么多想法，可能是我自己最近压力比较大，思绪比较敏感（笑）。好，下面我就谈一谈它带给我的一些思考。&lt;/p&gt;
+
+&lt;p&gt;这个游戏不知为何，给我一种强烈的和人类资本（或者更夸张一点，整个自然世界）很相似的感觉，一种影射。下面就是一些点：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;基本规则：大的球吃掉小的球。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;和人类资本，自然世界一样，弱肉强食，大的公司收购小的公司，强大的生物吞噬小的生物。这是亘古不变的定律，所有的生物（资本）都处在吞噬和被吞噬的食物（资本）链上，谁也逃不掉。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;生存是第一要务。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;正是我喜爱的《三体》中传达的一个重要思想，它是所以这一切的前提，我们的小球不断变大变大变大或者战略性变小，为的就是生存。变大了，就能够一次性吃更多随机出现的食物，有更大的几率吃别的小球，并且可以按一个减号，一分为二，其中一半是快速的弹射出去，这样就可以在这个方向上吃掉一个（或者一片，只要你足够大）比你的一半还要小的小球，一种更高级，高效的捕食手段。正如资本市场，在发展到一定规模后，可以通过股市来进行资本积累，而不是简单低效得通过用户，并获得良性循环，股价越高，公司越有钱，就可以有更大得几率能够赚更多的钱，于是资本是以几何增长的。而类比到自然世界，最直观的，其实是我们人类自己，我们发展发展，变成了食物链顶端的生物，于是我们有了数不尽的捕食手段，我们已经不是球球世界里的球球，而是那个黑的格子背景，我们是掌控了整个生物链世界背景的生物。而从弱小的那一方来看，同样是生存，小的球拥有更快的速度，于是在已经确定要被吞噬的时候，可以一分为二，以一半的自己，快速逃离，或者在过大的时候，不断吐出一些小球，让自己变轻，变快之后再吃掉刚才吐出的。正如资本世界中，更小的资本有更多的灵活性，创业公司往往能做出更好的，更符合用户的产品。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;发展往往与威胁共存。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;球，并不是越大越好。当你变大时，就有更大的可能性，被比你更大的球盯上，因此保持一个合适的大小很重要。经常会出现，一个房间前几名的球，一次性被第一的球吃掉了，这样第一就更加不可撼动，往往一个房间的第一能够比第二重几万倍。正如在资本世界中，某个领域第一的巨头，往往体量是其余公司的总和。但是，在球球的世界里，一个房间的第一，球的中间会突然生成一个绿色带刺的球，一旦你完全覆盖它，就会把你的球分成许多小的球。正如一个领域的第一的巨头，往往有垄断的问题，会被受到反垄断，或者声誉比产品更重要等问题。而自然世界，不用多说，人类自身的问题是比别的所有生物都要多得多。而且前一点说的几何增长，不只是资本几何增长，问题和有毒物质也是几何增长，参见海洋里的有毒物质的富集，越是食物链顶端，有毒的物质越多。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;合作的重要性。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;游戏里可以语音，每个人在一段时间后，可以点击麦克风，说几秒的话，整个房间都可以听见。一般情况下，语音里的人都会说求合作，自己在哪个位置等等。一个房间的前几名基本都是合作的人占领的，这个也许就是这个简单游戏最复杂的核心玩法。具体操作大概就是，大球a给一些自己的重量给小球b，b迅速变大，可以出其不意得吃掉旁边原本和b差不多大的c，然后b再吐回一些还给a。然后当遇到比ab都大的球d时，b就给很多重量甚至自己的全部给a，这样a就不会被吃掉。这样，就可以大大提升抗风险能力和捕食能力。这个在资本世界里也是这样，最近的说，中国几个互联网领域里的第一第二都合并了，自然世界里也有很多这样的例子。其实深入想想，人的商品经济也就是合作的一种形式，各取所需。&lt;/p&gt;
+
+&lt;p&gt;其实还有一些，比如双刃剑，刚才提到的绿色的带刺球，可以让大的球变成许多小的，同时也能给小的球提供庇护所；在一个特别大的球的周围会有许多小的球是合作的，如同一个巨型公司可以养活许多下游上游的小公司，抑或是自然界的小型生态系统等等这些点。&lt;/p&gt;
+
+&lt;p&gt;其实深入想想，还有很多，这让我很震惊。小小的游戏里，其实真的有很大的内涵。在这个游戏里，我甚至看到了比许多别的游戏中更加强烈的好胜心，许多人在被大的球吃掉后，会在麦克风里骂人，也许除了素质这一因素，还有更深的有关于人作为动物这一根本的天性有些关系。这些弱肉强食的吞噬，唤醒了一些人的基因里一些对于生存的渴望和被吞噬的恐惧。可能是我想太多了，但是不得不承认，这个简单的大的球“噗”一声吃掉小的球的动作，太直观，太容易联想到别的一些东西了。&lt;/p&gt;
+
+&lt;p&gt;也许你看到这里，会笑我吃饱没事干，玩个游戏啊，想这么多。也许吧，但是总得有些人有一些思索，一些居安思危的思索。&lt;/p&gt;
+
+&lt;p&gt;毕竟，人也不是生来就是世界的霸主。&lt;/p&gt;
+
+&lt;p&gt;以上。&lt;/p&gt;
+
+&lt;p&gt;－－Bern3rsH写于2016.3.28&lt;/p&gt;
+</description>
+        <pubDate>Tue, 29 Mar 2016 07:16:00 +0800</pubDate>
+        <link>bernersh.github.io/2016/03/29/game/</link>
+        <guid isPermaLink="true">bernersh.github.io/2016/03/29/game/</guid>
+        
+        <category>杂谈</category>
+        
+        <category>Game</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>[前端]浅尝app拍照翻转问题</title>
         <description>&lt;blockquote&gt;
   &lt;p&gt;“别告诉我那地方在哪，否则世界就小了”&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -65,9 +520,9 @@
 
 &lt;pre&gt;&lt;code&gt; 	mui(&#39;body&#39;).on(&#39;shown&#39;, &#39;.mui-popover&#39;, function(e) {});
  	mui(&#39;body&#39;).on(&#39;hidden&#39;, &#39;.mui-popover&#39;, function(e) {});
-	
+
 	            function addphoto(photoid) {
-	                if (hasClass(imgdiv[photoid - 1], &#39;transparent&#39;)) {} 
+	                if (hasClass(imgdiv[photoid - 1], &#39;transparent&#39;)) {}
 	                else {
 	                    var btnArray = [{
 	                        title: &quot;使用手机拍照&quot;
@@ -115,11 +570,11 @@
 	                }]
 	            }
 	            var imgflag=0;
-	
+
 	            function getImage(photoid) {
 	                imgflag=1;
-	
-	
+
+
 	                    var cmr = plus.camera.getCamera();
 	                    cmr.captureImage(function(p) {
 	                        plus.io.resolveLocalFileSystemURL(p, function(entry) {
@@ -132,11 +587,11 @@
 	                    });
 	                }
 	                //相册选取
-	
-	
+
+
 	            function galleryImgs(photoid) {
 	                imgflag=0;
-	
+
 	                plus.gallery.pick(function(e) {
 	                    var phototempid = &#39;photo&#39; + photoid;
 	                    document.getElementById(phototempid).src = e.files;
@@ -145,42 +600,42 @@
 	                });
 	            }
 	            var f1 = null;
-	
+
 	            function appendFile(path, photoid) {
 	                var img = new Image();
 	                img.src = path;
 	                img.onload = function() {
 	                    var that = this;
-	                    //生成比例 
+	                    //生成比例
 	                    var w = that.width,
 	                        h = that.height,
 	                        scale = w / h;
-	
+
 	                    w = 480 || w;
 	                    h = w / scale;
 	                    //生成canvas
-	
-	
+
+
 	                    var canvas = document.createElement(&#39;canvas&#39;);
-	
+
 	                    var ctx = canvas.getContext(&#39;2d&#39;);
 	                    $(canvas).attr({
 	                        width: w,
 	                        height: h
 	                    });
 	                    //旋转
-	
-	
-	
-	
-	
+
+
+
+
+
 	    var image1 = new Image();
-	
+
 	      // regular rotation about center
 	      var xpos = canvas.width/2;
 	      var ypos = canvas.height/2;
 	      ctx.drawImage(image1, xpos - image1.width / 2, ypos - image1.height / 2);
-	
+
 	      ctx.translate(xpos, ypos);
 	      ctx.rotate(450* Math.PI / 180);//旋转450度
 	      ctx.translate(-xpos, -ypos);
@@ -188,7 +643,7 @@
 	    //旋转结束
 	            };  
 	                ctx.drawImage(that, 0, 0, w, h);
-	
+
 	                    var base64 = canvas.toDataURL(&#39;image/jpeg&#39;, 0.6 || 0.6); //1最清晰，越低越模糊。
 	                    f1 = base64;
 	                    f1 = f1.replace(/data:image\/jpeg;base64,/, &quot;&quot;);
@@ -224,9 +679,9 @@
 
 &lt;pre&gt;&lt;code&gt;// 读取图片数据
 	var fr = new FileReader();
-	fr.readAsDataURL(file); 
-	
-	fr.onload = function(fe){ 
+	fr.readAsDataURL(file);
+
+	fr.onload = function(fe){
 	    var result = this.result;
 	    var img = new Image();
 	 var exif;
@@ -234,26 +689,26 @@
 	        var orientation = exif ? exif.Orientation : 1;
 	        // 判断拍照设备持有方向调整照片角度
 	        switch(orientation) {
-	            case 3: 
-	                imgRotation = 180; 
+	            case 3:
+	                imgRotation = 180;
 	                break;
-	            case 6: 
-	                imgRotation = 90; 
+	            case 6:
+	                imgRotation = 90;
 	                break;
-	            case 8: 
-	                imgRotation = 270; 
+	            case 8:
+	                imgRotation = 270;
 	            break;
 	        }
 	    };
-	
+
 	    // 转换二进制数据
 	    var base64 = result.replace(/^.*?,/,&#39;&#39;);
-	    var binary = atob(base64); 
+	    var binary = atob(base64);
 	    var binaryData = new BinaryFile(binary);
-	
+
 	    // 获取exif信息
 	    exif = EXIF.readFromBinaryFile(binaryData);
-	
+
 	    img.src = result;
 	};
 &lt;/code&gt;&lt;/pre&gt;
@@ -275,11 +730,11 @@
 	  var preview = document.querySelector(&#39;img&#39;);
 	  var file    = document.querySelector(&#39;input[type=file]&#39;).files[0];
 	  var reader  = new FileReader();
-	
+
 	  reader.onloadend = function () {
 	    preview.src = reader.result;
 	  }
-	
+
 	  if (file) {
 	    reader.readAsDataURL(file);
 	  } else {
@@ -303,7 +758,7 @@
         <link>bernersh.github.io/2015/12/22/photo/</link>
         <guid isPermaLink="true">bernersh.github.io/2015/12/22/photo/</guid>
         
-        <category>FE2</category>
+        <category>FE</category>
         
         <category>HTML</category>
         
@@ -410,9 +865,9 @@
         <link>bernersh.github.io/2015/12/16/welcome/</link>
         <guid isPermaLink="true">bernersh.github.io/2015/12/16/welcome/</guid>
         
-        <category>Life</category>
+        <category>杂谈</category>
         
-        <category>FE2</category>
+        <category>FE</category>
         
         
       </item>

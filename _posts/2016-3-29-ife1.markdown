@@ -1,0 +1,46 @@
+---
+layout:       post
+title:        "[IFE]百度IFE前端技术学院任务一笔记"
+subtitle:     " \"HTML5新增元素，article和section元素，figure元素，input的pattern属性。\""
+date:         2016-3-29 8:20:00
+author:       "Bern3rsH"
+header-img:   "img/ife-bg.jpeg"
+tags:
+      - IFE
+      - FE
+      - HTML
+---
+
+>一直对[百度IFE前端技术学院](http://ife.baidu.com/){:target="_blank"}这件事很赞赏，觉得他们是做了一件很好的事。而做任务的过程中，真的发现了蛮多小的点，自己以前放过了，争取现在加油打牢基础。诶，白天课还挺多，只能晚上加油啦。我尽量把遇到的问题和解决方法都列出来吧，弱渣一枚，大家共勉。感谢百度吧，提供这样的一次机会，前两季班都开了个头就因为时间问题放弃了，希望这一次可以真正去提升自己。希望大家多去[中南前端](http://ife.baidu.com/group/profile?groupId=440){:target="_blank"}，去review我们，谢谢啦。现在我将我在那里的学习笔记同步过来。
+
+任务一：零基础HTML编码
+[任务](http://ife.baidu.com/task/detail?taskId=1){:target="_blank"}
+[代码](https://github.com/BernersH/baidu-ife-2016-spring/tree/master/1){:target="_blank"}
+[demo](http://bernersh.github.io/baidu-ife-2016-spring/1/index.html){:target="_blank"}
+
+## 前言
+这两天，做这个最大的感悟就是，review的重要性，自己以前很少会去review别人的代码。总是看着设计稿或者某个功能，直接上手敲，遇到不会的就Google，但是这两天的经历让我觉得真的受益匪浅。看着别人的代码，看出别人的不同，或是看到更好的技术实现。或许这就是我们和搬砖的不同（大雾），这样的借鉴学习过程，让我们不是在做一个熟练工种，诚然，写前端需要写大量的页面熟手，而修炼内功，以前只知道看书，现在感觉review别人的代码也可以了。对了，看看这个设计稿，想想去年刚入门的自己，差不多要一个星期才可以写第一个的这个页面，也许那个时候有这个前端技术学院，可以提升飞快。闲话不说了，写一写自己遇到的一些不会或者不了解很深的点吧。
+
+## 技术点
+* **HTML5新增元素**
+
+  用到的主要是一些HTML5中新增的主体结构元素，\<header\>,\<nav\>,\<article\>,\<hgroup\>,\<time\>,\<section\>,\<figure\>,\<aside\>,\<footer\>等等。HTML5的时代，终于不用div，div，div到底了。这里有两张来自《HTML5与CSS3权威指南》的图，可以很明朗的显示出区别。
+
+  ![h4](http://7xrx2z.com1.z0.glb.clouddn.com/h4.png)
+  ![h5](http://7xrx2z.com1.z0.glb.clouddn.com/h5.png)
+  从这两个图中可以很清晰得看出，HTML5页面的不同，结构明晰，对应的内容有对应的标签，这样我们可以预见，在添加样式的时候，省去了许多添加类的工作，而且对于搜索引擎更加友好。
+
+* **article和section元素**
+
+ 这两个标签其实从某种意义上来说，是从属元素。section元素是在article标签中的具有小标题的内容，一个article元素可以含有多个section元素。article元素，一般是独立的，完整的，可以独自被外部引用的内容。而section就是属于一块块的内容，作用就是分块，而且一般是由标题的，其中的内容可以单独存储在数据库或输出到word文档中。
+
+* **figure元素**
+
+ figure元素是一种元素的组合，标题可选，内容一般是图片，统计图和代码示例，个人理解就是多媒体化的section元素。figcaption元素是figure元素的标题，一个figure元素里面最多有一个figcaption元素。[W3CSchool](http://www.w3school.com.cn/tags/tag_figure.asp){:target="_blank"}上有相关的例子和说明。
+
+* **input的pattern属性**
+
+ 这个属性我一开始是不知道的，一开始并没有做相关密码的正则匹配验证，后来在review一位同学的代码时，看到了这个属性，去查了下，可以用来做正则匹配。同样[W3CSchool](http://www.w3school.com.cn/html5/att_input_pattern.asp){:target="_blank"}上有相关的内容。正则表达式我一直认为是一个很神奇的东西，哈哈。希望大家用好这个强大的工具。
+
+## 感想
+这第一个任务做下来，感觉虽然不是很难，但是有些过去没注意的代码规范的问题，凸显出来，需要多注意，多review他人的代码。一些HTML5新的元素什么的，有时间要多看，加强代码的可读性，看看自己以前的一些项目代码，产生了重构他们的想法（估计近似于重写了）。诶，说好的语义化，一赶就都顾不上了，这一点要改。这次让我重新回忆起以前的MarkDown语法内容和Git操作，也是另外的收获吧。这第一篇废话有点多，以后尽量多写问题相关的，啦啦啦。
